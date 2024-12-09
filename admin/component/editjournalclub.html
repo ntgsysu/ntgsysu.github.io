@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/base/logo/atomicon.ico">
+    <title>修改Journal ClubClub</title>
+    <script src="../js/sideNav.js" type="module"></script>
+    <link rel="stylesheet" href="../css/editjournalclub.css">
+    
+
+</head>
+<body>
+    <main>
+
+        <div id="displayJClub">
+            <form id="displayJClub_form">
+                <h3>报告信息</h3>
+                <div class="item">
+                    <label for="jc_title">标题</label>
+                    <div class="input"><input type="text" id="jc_title"></div></div>
+                <div class="item">
+                    <label for="jc_startTime">时间</label>
+                    <div class="input time"><input  id="jc_startTime" placeholder="开始时间" > ~ <input id="jc_endTime" placeholder="结束时间" ></div>
+                </div>
+                <div class="item">
+                    <label for="jc_speaker">报告人</label>
+                    <div class="input"><input type="text" id="jc_speaker" list="speaker_option"></div>
+                </div>
+                <div class="item">
+                    <label for="jc_room">地点</label>
+                    <div class="input"><input type="text" id="jc_room" list="room_option"></div>
+                </div>
+                <div class="item">
+                    <label for="jc_ppt">报告PPT</label>
+                    <div class="input"><input type="file" id="jc_ppt"></div>
+                </div>
+                
+                <h3>论文信息</h3>
+    
+                <div class="item">
+                    <label for="jc_paper_title">论文标题</label>
+                    <div class="input"><input type="text" id="jc_paper_title"></div>
+                </div>
+    
+                <div class="item">
+                    <label for="jc_paper_link">论文链接</label>
+                    <div class="input"><input type="url" id="jc_paper_link"></div>
+                </div>
+                <div class="item">
+                    <label for="jc_paper_abstract">摘要</label>
+                    <textarea id="jc_paper_abstract"></textarea>
+                </div>
+    
+    
+                <datalist id="speaker_option">
+                    <option value="张馨">
+                    <option value="林炜">
+                    <option value="陈若男">
+                    <option value="王宸璨">
+                    <option value="周恩付">
+                    <option value="张妍心">
+                    <option value="丁晨蓉">
+                    <option value="尧江明">
+                    <option value="焦长峰">
+                </datalist>
+                <datalist id="room_option">
+                    <option value="天琴大楼2316">
+                    <option value="天琴大楼2317">
+                </datalist>
+            </form>
+
+        <div class="button_event">
+            <button type="button" id="delete" onclick="deleteJClubData()">删除</button>
+            <button type="button" id="submit" onclick="updateJClubDataWithFile()">提交</button>
+        </div>
+        </div>
+
+        <div id="jclubList">
+            <h3>Journal Club List</h2>
+            <div class="search">
+                <form id="search_form">
+                    <label for="speaker">报告人:</label><input type="text" id="search_speaker" list="speaker_option">
+                    <label for="time">开始时间:</label><input type="month" id="search_startTime">
+                    <label for="time">结束时间:</label><input type="month" id="search_endTime">
+                    <button type="button" onclick="getJClubData('search_form')" id="search_button"><svg t="1677848406334" class="icon" viewBox="0 0 1036 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2888" width="20" height="20"><path d="M1036.303023 935.288732l-88.711269 88.711268-217.439737-214.266852C653.420008 869.499937 558.103959 906.53851 453.269255 906.53851a453.269255 453.269255 0 1 1 453.269255-453.269255 449.772607 449.772607 0 0 1-88.51701 266.910839l218.281523 215.108638zM453.269255 129.505501a323.763754 323.763754 0 1 0 0.064753 647.59226A323.763754 323.763754 0 0 0 453.269255 129.505501z" fill="#97A6BB" p-id="2889"></path></svg>
+                    </button>
+                </form>
+                
+            </div>  
+            <ul class="list" id="dataRender">
+            </ul>
+        </div>
+
+    </main>
+    
+
+    <script src="../js/journalclub.js"></script>
+</body>
+</html>

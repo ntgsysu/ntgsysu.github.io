@@ -1,0 +1,70 @@
+@import url(base.css);
+main {
+  height: 1000px;
+}
+main .column {
+  margin: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+main .column .title {
+  width: 100%;
+  display: block;
+  font-size: 20px;
+  color: #005826;
+  border-bottom: 1px solid #005826;
+}
+main .column .item {
+  width: 200px;
+  height: 80px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  color: #666;
+  border-radius: 5px;
+  box-shadow: 0 0 6px #999;
+  margin: 0 5px;
+}
+main .column .item i {
+  color: #005826;
+  float: left;
+  display: block;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+main .column .item i img {
+  height: 70%;
+}
+main .column .item span {
+  font-size: 14px;
+  color: #666;
+  float: right;
+  display: block;
+  font-size: 20px;
+  width: 120px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .column .calendar i {
+  position: relative;
+}
+main .column .calendar i .current-time {
+  position: absolute;
+  left: 30% ;
+  top: 22%;
+}
+main .column .calendar i .current-time .current-time-year {
+  font-size: 14px;
+}
+main .column .calendar i .current-time .current-time-mmdd {
+  font-size: 18px;
+  position: absolute;
+  bottom: -20px;
+}

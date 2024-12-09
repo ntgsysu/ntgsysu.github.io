@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/base/logo/atomicon.ico">
+    <title>添加Journal Club</title>
+    <link rel="stylesheet" href="../css/addjournalclub.css">
+    <script src="../js/sideNav.js" type="module"></script>
+    
+
+</head>
+<body>
+   <main>
+    <h2 style="text-align: center; color:grey;">添加Journal Club</h2>
+
+    <div id="addJClub">
+        <form id="addJClub_form">
+            <h3 style="text-align: center;">报告信息</h3>
+            <div class="item">
+                <label for="jc_title">标题</label>
+                <div class="input"><input type="text" id="jc_title"></div></div>
+            <div class="item">
+                <label for="jc_startTime">时间</label>
+                <div class="input time"><input  id="jc_startTime" placeholder="开始时间" > ~ <input id="jc_endTime" placeholder="结束时间" ></div>
+            </div>
+            <div class="item">
+                <label for="jc_speaker">报告人</label>
+                <div class="input"><input type="text" id="jc_speaker" list="speaker_option"></div>
+            </div>
+            <div class="item">
+                <label for="jc_room">地点</label>
+                <div class="input"><input type="text" id="jc_room" list="room_option"></div>
+            </div>
+            <div class="item">
+                <label for="jc_ppt">报告PPT</label>
+                <div class="input"><input type="file" id="jc_ppt"></div>
+            </div>
+            
+            <h3 style="text-align: center;">论文信息</h3>
+
+            <div class="item">
+                <label for="jc_paper_title">论文标题</label>
+                <div class="input"><input type="text" id="jc_paper_title"></div>
+            </div>
+
+            <div class="item">
+                <label for="jc_paper_link">论文链接</label>
+                <div class="input"><input type="url" id="jc_paper_link"></div>
+            </div>
+            <div class="item">
+                <label for="jc_paper_abstract">摘要</label>
+                <!-- <div class="input"><input type="text" id="jc_paper_abstract"></div> -->
+                <textarea id="jc_paper_abstract"></textarea>
+            </div>
+
+
+            <datalist id="speaker_option">
+                <option value="张馨">
+                <option value="林炜">
+                <option value="陈若男">
+                <option value="王宸璨">
+                <option value="周恩付">
+                <option value="张妍心">
+                <option value="丁晨蓉">
+                <option value="尧江明">
+                <option value="焦长峰">
+            </datalist>
+            <datalist id="room_option">
+                <option value="天琴大楼2316">
+                <option value="天琴大楼2317">
+            </datalist>
+
+            <button type='button' onclick="addJClubDataWithFile('addJClub_form')">提交</button><br>
+        </form>
+    </div>
+   </main>
+
+   <script src="../js/journalclub.js"></script>
+    
+</body>
+</html>

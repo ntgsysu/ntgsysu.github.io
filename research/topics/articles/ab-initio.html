@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>原子核结构的第一性原理计算</title>
+    <link rel="icon" href="/base/logo/favicon.ico">
+
+    <link rel="stylesheet" href="/fa/css/all.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="./css/articles.css">
+
+    <script type="text/javascript"src="https://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <script>
+        $(function(){
+            $("header").load("/base/header.html");
+            $("nav").load("/base/nav.html");
+            $("footer").load("/base/footer.html");
+        });
+    </script>
+</head>
+
+<body>
+    <header></header>
+    <nav></nav>
+
+
+    <main>
+        <div class="content w">
+            <div class="title">原子核结构的第一性原理计算</div>
+
+            <div class="introduce">
+                <p>
+                    原⼦核是核子之间通过强相互作用结合形成的量子多体系统。一方面，描述强相互作用的基本理论是量子色动力学（QCD），其耦合强度随着能标降低而增加。这导致强相互作用在原子核能标区域不能通过微扰展开来处理。因此，直接从QCD理论出发，构建原子核理论模型非常困难。尽管已经可以通过格点QCD进行非微扰求解，但是目前只能计算到核子数A=3的原子核。原子核从头计算方法从现实核力出发，通过近似严格求解（或者采用逐级收敛的多体方法近似求解）原子核波函数来研究核结构与衰变属性。由于现实核力存在强排斥芯，在动量空间表现为高低动量态之间的强耦合，使得多体计算的收敛变得很困难，对计算机运算能力提出更高要求。因此，原子核从头计算方法在很长一段时间进展缓慢。尽管存在很大挑战，原子核从头计算有助于理解不同多体方法之间由于模型空间截断引起的计算结果的差异，即实现从相同手征核力出发，计算相同物理量，分析并量化导致差异的原因，从而最终获得较为可靠的理论结果。因此，实现从轻到重原子核的从头计算一直是核理论工作者追求的目标。
+                </p>
+                <p>
+                    上个世纪九十年代初，Weinberg提出了从有效场论导出核力的一种方式。其基本思想是构造满足QCD对称性限制的有效拉格朗日量，将所有可能的贡献按照 的幂（阶）次展开，并计算到给定阶次的贡献。这里Q是原子核内核子的典型动量，<svg xmlns="http://www.w3.org/2000/svg" width="1.57ex" height="1.62ex" viewBox="0 -716 694 716" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"><defs><path id="MJX-2-TEX-N-39B" d="M320 708Q326 716 340 716H348H355Q367 716 372 708Q374 706 423 547T523 226T575 62Q581 52 591 50T634 46H661V0H653Q644 3 532 3Q411 3 390 0H379V46H392Q464 46 464 65Q463 70 390 305T316 539L246 316Q177 95 177 84Q177 72 198 59T248 46H253V0H245Q230 3 130 3Q47 3 38 0H32V46H45Q112 51 127 91Q128 92 224 399T320 708Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="math"><g data-mml-node="mi"><use xlink:href="#MJX-2-TEX-N-39B"></use></g></g></g></svg>是手征对称性破缺能标（≈ 700 MeV）。对于大部分原子核，动量Q近似等于<svg xmlns="http://www.w3.org/2000/svg" width="1.29ex" height="1ex" viewBox="0 -431 570 442" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" ><defs><path id="MJX-6-TEX-I-1D70B" d="M132 -11Q98 -11 98 22V33L111 61Q186 219 220 334L228 358H196Q158 358 142 355T103 336Q92 329 81 318T62 297T53 285Q51 284 38 284Q19 284 19 294Q19 300 38 329T93 391T164 429Q171 431 389 431Q549 431 553 430Q573 423 573 402Q573 371 541 360Q535 358 472 358H408L405 341Q393 269 393 222Q393 170 402 129T421 65T431 37Q431 20 417 5T381 -10Q370 -10 363 -7T347 17T331 77Q330 86 330 121Q330 170 339 226T357 318T367 358H269L268 354Q268 351 249 275T206 114T175 17Q164 -11 132 -11Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="math"><g data-mml-node="mi"><use xlink:href="#MJX-6-TEX-I-1D70B"></use></g></g></g></svg>介子质量（≈140 MeV）。因此，手征有效场论一般包括<svg xmlns="http://www.w3.org/2000/svg" width="1.29ex" height="1ex" viewBox="0 -431 570 442" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" ><defs><path id="MJX-6-TEX-I-1D70B" d="M132 -11Q98 -11 98 22V33L111 61Q186 219 220 334L228 358H196Q158 358 142 355T103 336Q92 329 81 318T62 297T53 285Q51 284 38 284Q19 284 19 294Q19 300 38 329T93 391T164 429Q171 431 389 431Q549 431 553 430Q573 423 573 402Q573 371 541 360Q535 358 472 358H408L405 341Q393 269 393 222Q393 170 402 129T421 65T431 37Q431 20 417 5T381 -10Q370 -10 363 -7T347 17T331 77Q330 86 330 121Q330 170 339 226T357 318T367 358H269L268 354Q268 351 249 275T206 114T175 17Q164 -11 132 -11Z"></path></defs><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)"><g data-mml-node="math"><g data-mml-node="mi"><use xlink:href="#MJX-6-TEX-I-1D70B"></use></g></g></g></svg>介子自由度。自从Entem 与 Machleidt 提出的“N3LO”手征核力对散射数据的拟合结果达到了唯象现实核力的精度之后，手征核力在原子核结构理论研究中逐渐流行起来。其中一个最重要的原因是核力以及电弱流算符都可以在手征有效场论中统一导出，并且截断到相同的阶次。截断引起的误差可以由数幂规则（power counting）较好地得到限制。尽管还存在一些问题有待解决，这些独特优势使得手征核力已经成为原子核从头计算方法中普遍采用的相互作用。相比于唯象现实核力，具有模型无关性的优点，但仍然存在低动量与高动量态之间的耦合。为了加快量子多体方法的收敛速度，人们通过引入相似重整化群（SRG）等方法减除现实核力中低动量与高动量之间的耦合。SRG方法可以在保证物理观测量不变的情况下，将高动量态对低能区核物理量的影响通过连续的幺正变换吸收到相互作用矩阵元中。
+                </p>
+                <p>
+                    核介质中相似重整化群理论（IMSRG）是由Tsukiyama等人于2011年发展起来的求解核多体问题的方法。类似自由空间SRG的思想，IMSRG通过引入一系列连续的幺正变换减除所选Hartree-Fock (HF) 参考态与其激发组态之间的耦合，最终使得所选参考态成为幺正变换后的哈密顿量的基态。从头计算方法在过去十年取得很大成功，已经可以应用到非常重（132Sn）的原子核研究。原子核从头计算为理解核物理现象提供了全新的视角，已经或者有望解决传统核理论方法无法解决的问题。
+                </p>
+
+        
+                <figure>
+                    <img src="./img/ab-initio-img1.png" alt="图1">
+                    <figcaption>图1. 核介质相似重整化群（IMSRG）对哈密顿量的演化</figcaption>
+                </figure>
+
+                <p>尽管如此，从头计算方法在处理原子核集体耦合（如形变）方面存在挑战，这影响其在核结构以及交叉前沿领域里的应用，包括丰中子原子核壳结构与集体性演化规律、原子核形状共存现象，奇特形变原子核单贝塔衰变以及无中微子双贝塔衰变矩阵元等。如何推广从头计算方法应用于描述中重形变原子核是需要解决的主要课题。</p>
+
+                <figure>
+                    <img src="./img/ab-initio-img2.png" alt="图2">
+                    <figcaption>图2. 基于正规乘积两体算符近似的多参考态核介质相似重整化群（MR-IMSRG）方法</figcaption>
+                </figure>
+
+
+            </div>
+
+            <div class="direction">
+                主要研究方向：
+                <ul>
+                    <li>观测量（单贝塔衰变算符、电多极跃迁算符等）的演化</li>
+                    <li>将MR-IMSRG(2)推广到包含正规乘积三体算符的MR-IMSRG(3)</li>
+                    <li>核介质生成坐标方法(IM-GCM)的进一步拓展</li>
+                    <li>核介质无规相位近似方法(IM-RPA)的发展</li>
+                </ul>
+            </div>
+
+
+        </div>
+
+    </main>
+
+    <footer></footer>
+    
+
+
+</body>

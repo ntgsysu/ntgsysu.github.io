@@ -1,0 +1,40 @@
+@import url(./base.css);
+
+@background-color:rgb(0 ,88,38);
+main{
+    min-height: 515px;
+    .news-list{
+        &::before{
+            content:'News List:';
+            display: block;
+            font-size: 24px;
+            color: @background-color;
+            margin-left: 130px;
+        }
+        .news-container{
+            display: block;
+            padding: 10px 200px;
+
+            li{
+                display: block;
+                font-size: 18px;
+                margin-bottom: 15px;
+                // border: 1px solid #000;
+                // background-color:aqua;
+                // border: 1px solid red;
+                .time{
+                    display: inline-block;
+                    width: 15%;
+                    text-align: center;
+                    color: #999;
+                    vertical-align:top;
+                }
+                .title{
+                    width:84%;
+                    display: inline-block;
+                    color: #069;
+                }
+            }
+        }
+    }
+}

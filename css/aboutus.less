@@ -1,0 +1,40 @@
+@import url(./base.css);
+
+@background-color:rgb(0 ,88,38);
+main{
+    background-color: rgb(224, 224, 224);
+    
+    .container{
+        padding: 5px 50px ;
+        background-color: #fff;
+
+        &::before{
+
+            content:'About Us';
+            font-size: 25px;
+            color: @background-color;
+        }
+        .group-img{
+            text-align: center;
+           img{
+               width: 45%;
+           }
+        }
+
+        .introduction{
+            color: #666;
+            font-size: 16px;
+            text-align: justify;
+
+              
+        ul>li{
+            margin-left: 40px;
+            list-style: circle;
+    
+        }
+        }
+  
+    }
+    
+
+}

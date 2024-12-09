@@ -1,0 +1,68 @@
+@import url(./base.css);
+
+@background-color:rgb(0 ,88,38);
+main{
+    .topics-list{
+        padding-top: 50px;
+        .topic-card{
+            position: relative;
+            height: 250px;
+            width: 100%;
+            box-shadow: 0 0 10px #999;
+            margin-bottom: 50px;
+            border-radius: 5px;
+            .side-img{
+                float: left;
+                height: 225px;
+                width: $height * 1.2;
+                margin: 5px 5px;
+                padding: 5px 5px;
+                // border: 2px solid rgba(0, 0, 0, 0.1);
+                overflow: hidden;
+                img{
+                    border-radius: 10px;
+                    display: block;
+                    width: 100%;
+                    // background-color: rgb(224, 224, 224);
+                }
+
+            }
+            .side-text{
+                float: right;
+                width: 73%;
+                height: 225px;
+                margin: 5px 5px;
+                padding: 5px 5px;
+                // border: 2px solid rgba(0, 0, 0, 0.1);
+
+                .title{
+                    text-align: center;
+                    font-size: 24px;
+                    color: #333;
+                }
+                .description{
+                    font-size: 16px;
+                    padding: 5px 10px;
+                    text-align: justify;
+
+                }
+
+            }
+            a{
+                color: blue;
+            }
+
+        }
+        // 图片和文字方向交替分布
+        .topic-card:nth-of-type(2n){
+            .side-img{float: left;}
+            .side-text{float: right;}
+        }
+        
+        .topic-card:nth-of-type(2n+1){
+            .side-img{float: left;}
+            .side-text{float: right;}
+        }
+    }
+
+}

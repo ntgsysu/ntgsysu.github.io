@@ -1,0 +1,461 @@
+@import url(base.css);
+.banner {
+  height: 600px;
+  background: url(../img/banner/banner-bg3.jpg) no-repeat center center / cover border-box border-box;
+  position: relative;
+}
+.banner .container {
+  width: 1200px;
+  height: 600px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+.banner .arrows {
+  display: block;
+  font-size: 26px;
+  width: 35px;
+  height: 60px;
+  color: white;
+  background-color: rgba(158, 154, 154, 0.7);
+  text-align: center;
+  line-height: 60px;
+  position: absolute;
+  top: 45%;
+  z-index: 99;
+}
+.banner .arrows.left {
+  left: 0;
+}
+.banner .arrows.right {
+  right: 0;
+}
+.banner .banner-list {
+  height: 600px;
+  margin: 0px auto;
+  position: relative;
+  z-index: 1;
+}
+.banner .banner-list li {
+  float: left;
+  overflow: hidden;
+  width: 1200px;
+  height: 580px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner .banner-list li img {
+  height: 560px;
+  box-shadow: 0 0 10px #333333;
+  border-radius: 1%;
+}
+.banner .bottom-list {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 99;
+}
+.banner .bottom-list li {
+  display: inline-block;
+  width: 80px;
+  height: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #999;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+.banner .bottom-list .selected {
+  background-color: #005826;
+}
+main .exhibition {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main .exhibition > div {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+main .exhibition > div .part-name {
+  font-family: "Microsoft YaHei";
+  width: 100%;
+  height: 37px;
+  margin: 10px 0;
+  padding: 1px;
+  font-size: 18px;
+  color: #fff;
+  background: linear-gradient(to right, #2a7343, 200px, #418B54);
+}
+main .exhibition > div .part-name h1 {
+  line-height: 35px;
+  float: left;
+  display: block;
+  padding: 1px 4px;
+}
+main .exhibition > div .part-name .more {
+  float: right;
+  line-height: 35px;
+  font-size: 14px;
+  padding-right: 20px;
+}
+main .exhibition > div .part-name .more a {
+  color: #fff;
+}
+main .exhibition .research {
+  width: 100%;
+}
+main .exhibition .news {
+  width: 600px;
+}
+main .exhibition .journalclub {
+  width: 576px;
+}
+main .exhibition .conference {
+  width: 600px;
+}
+main .exhibition .seminar {
+  width: 576px;
+}
+main .exhibition .spare-time {
+  width: 100%;
+}
+.news ul {
+  height: 370px;
+  width: 100%;
+  overflow: hidden;
+}
+.news ul li {
+  height: 40px;
+  margin: 10px 0;
+}
+.news ul li .text .time {
+  box-sizing: border-box;
+  width: 88px;
+  float: right;
+  background-color: #2a7343;
+  color: #fff;
+  line-height: 40px;
+  padding: 0 5px;
+}
+.news ul li .text .title {
+  width: 512px;
+  float: right;
+  background-color: #f4f4f4;
+  height: 40px;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+.journalclub ul {
+  height: 370px;
+  width: 100%;
+  overflow: hidden;
+}
+.journalclub ul li {
+  height: 45px;
+  line-height: 45px;
+  font-size: 20px;
+}
+.journalclub ul li::before {
+  font-family: 'Font Awesome 6 Brands', 'Font Awesome 6 Free';
+  font-weight: 400;
+  content: '\f35a';
+  margin: 0 5px;
+  color: #005826;
+  float: left;
+}
+.journalclub ul li a {
+  width: 92%;
+  display: block;
+  float: left;
+}
+.journalclub ul li a .time,
+.journalclub ul li a .content {
+  height: 45px;
+  color: #666;
+  font-size: 16px;
+  float: left;
+}
+.journalclub ul li a .content {
+  width: 82%;
+  overflow: hidden;
+  text-align: justify;
+}
+.journalclub ul li a .time {
+  width: 88px;
+  color: #005826;
+  overflow: hidden;
+}
+.journalclub ul li:hover {
+  background-color: rgba(220, 224, 222, 0.5);
+}
+.journalclub ul li.new {
+  background-image: url(/img/new.png);
+  background-size: 26px 26px;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+.conference ul {
+  height: 370px;
+  width: 100%;
+  overflow: hidden;
+}
+.conference ul li {
+  height: 80px;
+  margin-bottom: 20px;
+}
+.conference ul li .time {
+  height: 80px;
+  width: 80px;
+  background-color: #2a7343;
+  float: left;
+  color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 15px 0 ;
+}
+.conference ul li .time .day {
+  font-size: 20px;
+}
+.conference ul li .time .year-month {
+  font-size: 14px;
+}
+.conference ul li a {
+  display: block;
+  float: right;
+  height: 80px;
+  width: 520px;
+  background-color: #f4f4f4;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding: 4px 10px;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.conference ul li.new .time {
+  background-image: url(/img/new.png);
+  background-size: 45px 45px;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+.seminar ul {
+  height: 370px;
+  width: 100%;
+  overflow: hidden;
+}
+.seminar ul li {
+  height: 45px;
+  line-height: 45px;
+  font-size: 20px;
+  width: 100%;
+}
+.seminar ul li::before {
+  font-family: 'Font Awesome 6 Brands', 'Font Awesome 6 Free';
+  font-weight: 400;
+  content: '\f35a';
+  margin: 0 5px;
+  color: #005826;
+  float: left;
+  font-size: 18px;
+}
+.seminar ul li a {
+  width: 92%;
+  display: block;
+  float: left;
+}
+.seminar ul li a .time,
+.seminar ul li a .content {
+  height: 45px;
+  color: #666;
+  font-size: 16px;
+  float: left;
+}
+.seminar ul li a .content {
+  width: 82%;
+  overflow: hidden;
+  text-align: justify;
+}
+.seminar ul li a .time {
+  height: 45px;
+  width: 88px;
+  color: #005826;
+  overflow: hidden;
+}
+.seminar ul li:hover {
+  background-color: rgba(220, 224, 222, 0.5);
+}
+.seminar ul li.new {
+  background-image: url(/img/new.png);
+  background-size: 26px 26px;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+.research .img-list {
+  height: 370px;
+  width: 669.7px;
+  overflow: hidden;
+  position: relative;
+}
+.research .img-list .imgs {
+  height: 370px;
+  width: 10000px;
+  position: absolute;
+  background-color: rgba(220, 224, 222, 0.2);
+}
+.research .img-list .imgs li {
+  height: 370px;
+  width: 669.7px;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.research .img-list .imgs li img {
+  width: 669.7px;
+}
+.research .img-list .imgs li .title {
+  display: none;
+  height: 45px;
+  line-height: 45px;
+  overflow: hidden;
+  width: 602.73px;
+  background-color: rgba(220, 224, 222, 0.7);
+  color: #333333;
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  font-size: 18px;
+  padding-left: 5px;
+}
+.research .img-list .imgs li .description {
+  display: none;
+}
+.research .img-list .imgs li:hover .title {
+  display: block;
+}
+.research .img-list .bottoms {
+  position: absolute;
+  z-index: 999;
+  bottom: 0px;
+  right: 5px;
+}
+.research .img-list .bottoms li {
+  height: 5px;
+  width: 5px;
+  float: left;
+  margin: 4px;
+  border-radius: 50%;
+  border: rgba(220, 224, 222, 0.7) 5px solid;
+}
+.research .img-list .bottoms li.selected {
+  background-color: #999;
+}
+.research .text-list {
+  height: 370px;
+  width: 530.3px;
+  box-sizing: border-box;
+  padding: 0px 5px;
+  overflow: auto;
+}
+.research .text-list ul li {
+  background-color: #fff;
+  height: 40px;
+  line-height: 40px;
+  transition: all 0.5s ease-out;
+  border: #2a7343 1px solid;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 0px 10px;
+  box-shadow: 0px 0px 5px #999;
+  overflow: hidden;
+}
+.research .text-list ul li a {
+  display: block;
+  overflow: hidden;
+}
+.research .text-list ul li .title {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  color: #333;
+  text-align: justify;
+  overflow: hidden;
+}
+.research .text-list ul li .description {
+  display: none;
+}
+.research .text-list ul li img {
+  display: none;
+}
+.research .text-list ul li:hover,
+.research .text-list ul li.active {
+  height: 140px;
+}
+.research .text-list ul li:hover .description,
+.research .text-list ul li.active .description {
+  line-height: 20px;
+  height: 100px;
+  display: block;
+  font-size: 12px;
+  color: #666;
+  text-align: justify;
+}
+.spare-time {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 350px;
+}
+.spare-time .arrows {
+  display: block;
+  font-size: 20px;
+  width: 40px;
+  height: 50px;
+  border-radius: 45%;
+  color: white;
+  background-color: rgba(158, 154, 154, 0.7);
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  top: 50%;
+  z-index: 99;
+}
+.spare-time .arrows.left {
+  left: 0;
+}
+.spare-time .arrows.right {
+  right: 0;
+}
+.spare-time ul {
+  height: 270px;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+}
+.spare-time ul li {
+  overflow: hidden;
+  flex-shrink: 0;
+  display: block;
+  height: 250px;
+  width: 300px;
+  margin-right: 20px;
+  box-shadow: 0px 0px 20px #999;
+}
+.spare-time ul li img {
+  height: 250px;
+}
+.spare-time ul li:hover {
+  box-shadow: 5px 5px 5px #333333;
+}

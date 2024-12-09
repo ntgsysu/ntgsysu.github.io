@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/base/logo/atomicon.ico">
+    <title>添加会议</title>
+    <link rel="stylesheet" href="../css/addconference.css">
+    <script src="../js/sideNav.js" type="module"></script>
+    
+
+</head>
+<body>
+   <main>
+    <h2 style="text-align: center; color:grey;">添加会议</h2>
+
+    <div id="addConference">
+        <form id="addConference_form">
+            <div class="item">
+                <label for="title">标题</label>
+                <div class="input"><input type="text" id="title"></div>
+            </div>
+            <div class="item">
+                <label for="satrtTime">时间</label>
+                <div class="input time"><input  id="startTime" type="date" placeholder="开始时间" >~<input  id="endTime" type="date" placeholder="结束时间" ></div>
+            </div>
+            <div class="item">
+                <label for="location">地点</label>
+                <div class="input"><input  id="location"  ></div>
+            </div>
+            <div class="item">
+                <label for="link">会议链接</label>
+                <div class="input"><input type="url" id="link"></div>
+            </div>
+            <button type='button' onclick="addConferenceData('addConference_form')" id="submit">提交</button><br>
+        </form>
+    </div>
+   </main>
+
+   <script src="../js/conference.js"></script>
+    
+</body>
+</html>

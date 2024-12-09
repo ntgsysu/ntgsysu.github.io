@@ -1,0 +1,46 @@
+@import url(base.css);
+main {
+  width: 100%;
+  height: 60vh;
+  font-size: 16px;
+  color: #666;
+}
+main h1 {
+  font-size: 30px;
+  color: #005826;
+}
+main .icon {
+  margin-top: 200px;
+}
+main .icon .telephone::before {
+  font-family: 'Font Awesome 6 Brands', 'Font Awesome 6 Free';
+  font-weight: 600;
+  content: '\f879';
+  color: #005826;
+  font-size: 40px;
+  display: block;
+  margin: 0 5px;
+}
+main .icon .address::before {
+  font-family: 'Font Awesome 6 Brands', 'Font Awesome 6 Free';
+  font-weight: 600;
+  content: '\f59f';
+  color: #005826;
+  font-size: 40px;
+  display: block;
+  margin: 0 5px;
+}
+main .icon .email::before {
+  font-family: 'Font Awesome 6 Brands', 'Font Awesome 6 Free';
+  font-weight: 600;
+  content: '\f0e0';
+  color: #005826;
+  font-size: 40px;
+  display: block;
+  margin: 0 5px;
+}
+main .icon > div {
+  float: left;
+  text-align: center;
+  width: 33%;
+}

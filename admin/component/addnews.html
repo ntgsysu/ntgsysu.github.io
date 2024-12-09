@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/base/logo/atomicon.ico">
+    <title>添加新闻</title>
+    <link rel="stylesheet" href="../css/addnews.css">
+    <script src="../js/sideNav.js" type="module"></script>
+    
+
+</head>
+<body>
+   <main>
+    <h2 style="text-align: center; color:grey;">添加News</h2>
+
+    <div id="addNews">
+        <form id="addNews_form">
+            <div class="item">
+                <label for="news_title">标题</label>
+                <div class="input"><input type="text" id="news_title"></div>
+            </div>
+            <div class="item">
+                <label for="news_time">时间</label>
+                <div class="input time"><input  id="news_time" type="date" placeholder="时间" ></div>
+            </div>
+
+            
+            <div class="item">
+                <label for="news_link">外部链接</label>
+                <div class="input"><input type="url" id="news_link"></div>
+            </div>
+
+            <div class="item">
+                <label for="news_imgs">图片</label>
+                <input type="file" accept="image/png, image/jpeg" id="news_imgs" multiple>  
+                <button id="submitImgs" onclick="addImages()" type="button">提交图片</button>
+            </div>
+            <div class="item">
+                <label for="">图片链接</label>
+                <div id="imgs_link">
+                </div>
+            </div>
+            
+
+
+            <div class="item">
+                <label for="news_content">内容</label>
+                <!-- <div class="input"><input type="text" id="news_paper_abstract"></div> -->
+                <textarea id="news_content"></textarea>
+            </div>
+
+
+
+            <button type='button' onclick="addNewsData('addNews_form')" id="submit">提交</button><br>
+        </form>
+    </div>
+   </main>
+
+   <script src="../js/news.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,136 @@
+.sidebar {
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(#141e30, #243b55);
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  overflow: auto;
+}
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu li {
+  margin-bottom: 10px;
+}
+.menu a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+.menu .show {
+  display: block;
+}
+.submenu li {
+  margin-bottom: 5px;
+}
+.submenu a {
+  display: block;
+  padding: 5px;
+  padding-left: 20px;
+  text-decoration: none;
+  color: #ddd;
+}
+main {
+  margin-left: 210px;
+  height: 100%;
+  display: block;
+  display: flex;
+}
+main #display {
+  width: 70%;
+}
+main #display #editConference {
+  font-size: 14px;
+  line-height: 20px;
+}
+main #display #editConference #editConference_form .item label {
+  margin-right: 16px;
+  margin-top: 20px;
+  width: 30%;
+  text-align: right;
+  display: inline-block;
+  color: #3A4E64;
+}
+main #display #editConference #editConference_form .item .input {
+  width: 60%;
+  height: 40px;
+  display: inline-block;
+}
+main #display #editConference #editConference_form .item .input input {
+  width: 200px;
+  height: 24px;
+  border: 2px solid #EAEDF1;
+  border-radius: 5px;
+  color: #5E6470;
+  outline-style: none;
+}
+main #display #editConference #editConference_form .item .input input:focus {
+  border: 1px solid #0085BD;
+}
+main #display #editConference #editConference_form .item #title,
+main #display #editConference #editConference_form .item #link {
+  width: 420px;
+}
+main #display .button_event {
+  margin-left: 40%;
+  margin-top: 20px;
+}
+main #display .button_event button {
+  width: 80px;
+  height: 30px;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 1px transparent solid;
+  display: inline-block;
+  margin: 20px;
+}
+main #display .button_event #submit {
+  background-color: #45b536;
+}
+main #display .button_event #submit:active {
+  background-color: black;
+}
+main #conferenceList {
+  width: 40%;
+  min-height: 200px;
+  border-left: 1px solid #EAEDF1;
+  padding-left: 10px;
+}
+main #conferenceList h3 {
+  color: #666;
+  font-size: 18px;
+  text-align: center;
+}
+main #conferenceList .list {
+  list-style: none;
+  padding-left: 0px;
+  font-size: 14px;
+}
+main #conferenceList .list li {
+  margin-top: 10px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  border: 1px solid #EAEDF1;
+  border-radius: 10px;
+}
+main #conferenceList .list li div {
+  margin-left: 5px;
+  display: inline-block;
+}
+main #conferenceList .list li:hover {
+  border: 1px solid green;
+  cursor: pointer;
+}

@@ -1,0 +1,32 @@
+@import url(base.css);
+main {
+  min-height: 515px;
+}
+main .news-list::before {
+  content: 'News List:';
+  display: block;
+  font-size: 24px;
+  color: #005826;
+  margin-left: 130px;
+}
+main .news-list .news-container {
+  display: block;
+  padding: 10px 200px;
+}
+main .news-list .news-container li {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+main .news-list .news-container li .time {
+  display: inline-block;
+  width: 15%;
+  text-align: center;
+  color: #999;
+  vertical-align: top;
+}
+main .news-list .news-container li .title {
+  width: 84%;
+  display: inline-block;
+  color: #069;
+}

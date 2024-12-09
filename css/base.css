@@ -1,0 +1,178 @@
+@import url(reset.css);
+/*css style that can apply all webpages  */
+.clearfix::before,
+.clearfix::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+a {
+  text-decoration: none;
+}
+body {
+  font: 14px/1.5 Georgia, Arial, Helvetica, "Microsoft YaHei", sans-serif;
+  color: #333;
+  background-color: #fff;
+  min-width: 1200px;
+}
+/* 网页的宽度 */
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+header .logo {
+  width: 100%;
+  height: 140px;
+}
+nav {
+  font-family: "Microsoft YaHei";
+  background-color: #005826;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+}
+nav .top-nav > ul {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+nav .top-nav > ul > li {
+  position: relative;
+  line-height: 60px;
+  width: 150px;
+  font-size: 18px;
+}
+nav .top-nav > ul > li > a {
+  display: block;
+  color: #fff;
+  text-align: center;
+}
+nav .top-nav > ul .extend,
+nav .top-nav > ul .extend li > a {
+  box-sizing: border-box;
+  padding-left: 10px;
+  display: block;
+  color: #fff;
+  text-align: left;
+}
+nav .top-nav > ul a:hover {
+  background-color: #40735d;
+}
+nav .top-nav > ul .extend i {
+  font-size: 14px;
+}
+nav .top-nav > ul .home i {
+  font-size: 28px;
+  padding-right: 6px;
+}
+nav #login {
+  font-size: 18px;
+}
+nav #login a {
+  color: #ddd;
+}
+.top-nav .more {
+  overflow: hidden;
+  background-color: #005826;
+  width: 150px;
+  height: 0;
+  box-shadow: 0 5px 10px #333333;
+  position: absolute;
+  top: 60px;
+  z-index: 999;
+  left: 0;
+  transition: height 1s;
+}
+.top-nav .more a {
+  line-height: 40px;
+  font-size: 16px;
+}
+.top-nav .extend:hover {
+  background-color: #005826;
+  box-shadow: 0 5px 10px #333333;
+}
+.top-nav .extend:hover::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 10px;
+  background-color: #005826;
+  position: absolute;
+  z-index: 9999;
+  bottom: 0px;
+  left: 0;
+}
+.top-nav .extend:hover .research {
+  height: 120px;
+}
+.top-nav .extend:hover .event {
+  height: 200px;
+}
+footer {
+  width: 100%;
+  background-color: #005826;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+footer .logo {
+  width: 660px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .links {
+  width: 600px;
+  margin-top: 5px;
+  margin-right: 20px;
+  margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+footer .links .title {
+  font-size: 18px;
+  color: #fff;
+  width: 600px;
+  margin-bottom: 10px;
+}
+footer .links .title span {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff;
+}
+footer .links > a {
+  margin-bottom: 8px;
+  height: 20px;
+  font-size: 16px;
+  color: #ddd;
+  display: block;
+  border-bottom: 1px solid #999;
+}
+footer .info {
+  margin-top: 5px;
+  margin-right: 20px;
+}
+footer .info .title {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+footer .info .title span {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #fff;
+}
+footer .info > span {
+  font-size: 16px;
+  color: #ddd;
+  display: block;
+}
+footer .copyrights {
+  width: 100%;
+  font-size: 14px;
+  color: #ddd;
+  text-align: center;
+}

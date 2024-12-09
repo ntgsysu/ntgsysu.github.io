@@ -1,0 +1,87 @@
+@import url(./base.css);
+
+@background-color:rgb(0,88,38);
+main{
+
+    height: 1000px;
+
+    .column{
+        margin: 10px 0;
+        display: flex;
+        flex-wrap: wrap;
+        .title{
+            width: 100%;
+            display: block;
+            font-size: 20px;
+            color: @background-color;
+            border-bottom: 1px solid @background-color;
+            
+        }
+
+        .item{
+            @item-height:80px;
+            @item-width:200px;
+            width: 200px;
+            height: @item-height;
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(246, 246, 246);
+            color: #666;
+            border-radius: 5px;
+            box-shadow: 0 0 6px #999;
+            margin: 0 5px;
+            
+            i{
+                color: @background-color;
+                float: left;
+                display: block;
+                height: @item-height;
+                width: $height;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                img{
+                    height: 70%;
+                }
+            }
+            span{
+                font-size: 14px;
+                color: #666;
+                float: right;
+                display: block;
+                font-size: 20px;
+                width: @item-width - @item-height;
+                height: @item-height;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+        }
+
+        .calendar{
+            i{
+                position: relative;
+                .current-time{
+                    position: absolute;
+                    left: 30% ;
+                    top: 22%;
+
+                    .current-time-year{
+                        font-size: 14px;
+                    }
+
+                    .current-time-mmdd{
+                        font-size: 18px;
+                        position: absolute;
+                        bottom: -20px;
+                    }
+                }
+            }
+     
+        }
+
+    }
+}

@@ -1,0 +1,61 @@
+@import url(./base.css);
+
+main{
+
+    min-height: 512px;
+
+    .spare-container{
+
+        .spare-list{
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            // background-color: #bfa;
+            justify-content: space-between;
+            &>li{
+                width: 550px;
+                height: 450px;
+                box-shadow: 0px 5px 5px #999;
+                margin-bottom: 50px;
+                border-radius: 5%;
+                overflow: hidden;
+                a{
+                    padding:20px 0;
+                    height: 100%;
+                    display: block; 
+                    .img{
+                        width: 500px;
+                        height: 375px;
+                        margin: 0px auto;
+                        background-color: rgb(224, 224, 224);
+                        border-radius: 10px;
+                        overflow: hidden;
+                        position: relative;
+
+               
+                        img{
+                            height: 100%;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform:translate(-50%,-50%);
+                        }
+                    }
+
+                    .description{
+                        text-align: center;
+                        font-size: 18px;
+                        color: #666;
+                        margin-top: 10px;
+                        .time{
+                            margin-right: 5px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+
+}

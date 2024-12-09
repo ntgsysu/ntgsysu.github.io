@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/base/logo/atomicon.ico">
+    <title>修改会议</title>
+    <link rel="stylesheet" href="../css/editconference.css">
+    <script src="../js/sideNav.js" type="module"></script>
+    
+
+</head>
+<body>
+   <main>
+    <div id="display">
+        <h2 style="text-align: center; color:grey;">更新会议</h2>
+
+        <div id="editConference">
+            <form id="editConference_form">
+                <div class="item">
+                    <label for="title">标题</label>
+                    <div class="input"><input type="text" id="title"></div>
+                </div>
+                <div class="item">
+                    <label for="satrtTime">时间</label>
+                    <div class="input time"><input  id="startTime" type="date" placeholder="开始时间" >~<input  id="endTime" type="date" placeholder="结束时间" ></div>
+                </div>
+                <div class="item">
+                    <label for="location">地点</label>
+                    <div class="input"><input  id="location"  ></div>
+                </div>
+                <div class="item">
+                    <label for="link">会议链接</label>
+                    <div class="input"><input type="url" id="link"></div>
+                </div>
+            </form>
+        </div>
+    
+        <div class="button_event">
+            <button type="button" id="submit" onclick="updateConference()">提交</button>
+        </div>
+    
+    </div>
+  
+    <div id="conferenceList">
+        <h3>Conference List</h2>
+        <button type="button" id="refresh" onclick="getConferenceData()">获取Conference</button> 
+        <ul class="list" id="dataRender">
+        </ul>
+    </div>
+
+
+   </main>
+
+   <script src="../js/conference.js"></script>
+    
+</body>
+</html>

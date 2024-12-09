@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/base/logo/atomicon.ico">
+    <title>修改报告</title>
+    <link rel="stylesheet" href="../css/editseminar.css">
+    <script src="../js/sideNav.js" type="module"></script>
+    
+
+</head>
+<body>
+   <main>
+    <div id="display">
+        <h2 style="text-align: center; color:grey;">更新报告</h2>
+
+        <div id="editSeminar">
+            <form id="editSeminar_form">
+                <div class="item">
+                    <label for="title">标题</label>
+                    <div class="input"><input type="text" id="title"></div>
+                </div>
+                <div class="item">
+                    <label for="reporter">报告人</label>
+                    <div class="input"><input type="text" id="reporter"></div>
+                </div>
+                <div class="item">
+                    <label for="inviter">邀请人</label>
+                    <div class="input"><input type="text" id="inviter"></div>
+                </div>
+                
+                <div class="item">
+                    <label for="startTime">时间</label>
+                    <div class="input time"><input  id="startTime" placeholder="开始时间" type="datetime-local" > ~ <input id="endTime" placeholder="结束时间" type="datetime-local"></div>
+                </div>
+                <div class="item">
+                    <label for="room">地点</label>
+                    <div class="input"><input type="text" id="room"></div>
+                </div>
+                <div class="item">
+                    <label for="img">海报</label>
+                    <input type="file" accept="image/png, image/jpeg" id="img" >  
+                </div>
+                <div class="item">
+                    <label for="ppt">PPT</label>
+                    <input type="file" id="ppt" >  
+                </div>
+    
+            </form>
+        </div>
+    
+        <div class="button_event">
+            <button type="button" id="submit" onclick="updateSeminar()">提交</button>
+        </div>
+    
+    </div>
+  
+    <div id="seminarList">
+        <h3>Seminar List</h2>
+        <button type="button" id="refresh" onclick="getSeminarData()">获取报告</button> 
+        <ul class="list" id="dataRender">
+        </ul>
+    </div>
+
+
+   </main>
+
+   <script src="../js/seminar.js"></script>
+    
+</body>
+</html>

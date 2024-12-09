@@ -1,0 +1,136 @@
+.sidebar {
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(#141e30, #243b55);
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  overflow: auto;
+}
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu li {
+  margin-bottom: 10px;
+}
+.menu a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+.menu .show {
+  display: block;
+}
+.submenu li {
+  margin-bottom: 5px;
+}
+.submenu a {
+  display: block;
+  padding: 5px;
+  padding-left: 20px;
+  text-decoration: none;
+  color: #ddd;
+}
+main {
+  margin-left: 210px;
+  height: 100%;
+  display: block;
+}
+main #addJClub {
+  font-size: 14px;
+  line-height: 20px;
+}
+main #addJClub #addJClub_form .item label {
+  margin-right: 16px;
+  margin-top: 20px;
+  width: 30%;
+  text-align: right;
+  display: inline-block;
+  color: #3A4E64;
+}
+main #addJClub #addJClub_form .item .input {
+  width: 40%;
+  height: 40px;
+  display: inline-block;
+}
+main #addJClub #addJClub_form .item .input input {
+  height: 24px;
+  border: 2px solid #EAEDF1;
+  border-radius: 5px;
+  color: #5E6470;
+  outline-style: none;
+}
+main #addJClub #addJClub_form .item .input input:focus {
+  border: 1px solid #0085BD;
+}
+main #addJClub #addJClub_form .item #jc_title {
+  width: 450px;
+}
+main #addJClub #addJClub_form .item .time {
+  width: 450px;
+  height: 30px;
+  border: 2px solid #EAEDF1;
+  border-radius: 5px;
+  color: #5E6470;
+}
+main #addJClub #addJClub_form .item .time input {
+  width: 180px;
+  position: relative;
+  height: 20px;
+  margin: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: none;
+  text-align: center;
+}
+main #addJClub #addJClub_form .item .time input[type=datetime-local]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 0;
+  padding-left: 100%;
+  visibility: hidden;
+}
+main #addJClub #addJClub_form .item .time input[type=datetime-local]:focus::-webkit-calendar-picker-indicator {
+  visibility: visible;
+}
+main #addJClub #addJClub_form .item #jc_paper_title {
+  width: 450px;
+}
+main #addJClub #addJClub_form .item #jc_paper_link {
+  width: 450px;
+  height: 15px;
+}
+main #addJClub #addJClub_form .item label[for='jc_paper_abstract'] {
+  height: 100%;
+  vertical-align: top;
+}
+main #addJClub #addJClub_form .item #jc_paper_abstract {
+  display: inline-block;
+  width: 450px;
+  height: 250px;
+  border: 2px solid #EAEDF1;
+  outline-style: none;
+}
+main #addJClub #addJClub_form .item #jc_paper_abstract:focus {
+  border: 1px solid #0085BD;
+}
+main #addJClub button {
+  width: 80px;
+  height: 30px;
+  background-color: green;
+  border-radius: 5px;
+  color: #ffffff;
+  border: 1px transparent solid;
+  margin-left: 45%;
+  margin-top: 20px;
+}

@@ -1,0 +1,88 @@
+@import url(base.css);
+main .side-nav {
+  float: right;
+  text-align: center;
+  width: 100px;
+  position: sticky;
+  top: 100px;
+  margin-right: 50px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+}
+main .side-nav a {
+  display: block;
+  font-size: 18px;
+  padding: 2px 5px;
+  color: #005826;
+}
+main .side-nav > a:hover {
+  background-color: #e0e0e0;
+}
+main .paperList::before {
+  content: 'Publications List';
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 26px;
+  color: #005826;
+}
+main .paperList div {
+  padding-top: 60px;
+}
+main .paperList div > span {
+  font-size: 20px;
+  color: #005826;
+}
+main .paperList div ul {
+  margin: 20px 0;
+  box-shadow: 0px 0px 5px #999;
+  padding: 10px 0px;
+  font-size: 16px;
+  color: #666;
+  text-align: left;
+  padding: 0px 10px;
+}
+main .paperList div ul li {
+  display: inline;
+  padding-right: 10px;
+}
+main .paperList div ul .title {
+  display: block;
+  font-size: 20px;
+  color: #005826;
+}
+main .paperList div ul .authors {
+  color: #0c7dbb;
+}
+main .paperList div ul .link .doi::before {
+  display: inline-block;
+  width: 25px;
+  content: 'DOI';
+  background-color: #fdb425;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  margin: 0 3px;
+}
+main .paperList div ul .link .arxiv::before {
+  display: inline-block;
+  text-align: center;
+  width: 35px;
+  content: 'arXiv';
+  background-color: #b41414;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  margin: 0 3px;
+}
+main .paperList div ul .link .pdf::before {
+  display: inline-block;
+  text-align: center;
+  width: 35px;
+  content: 'PDF';
+  background-color: #da0000;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 12px;
+  margin: 0 3px;
+}

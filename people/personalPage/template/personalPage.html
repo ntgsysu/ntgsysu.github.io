@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalPage</title>
+    <link rel="icon" href="/base/logo/favicon.ico">
+
+    <link rel="stylesheet" href="/fa/css/all.css">
+    <link rel="stylesheet" href="./css/personalPage.css">
+
+    <script type="text/javascript"src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <script>
+        $(function(){
+            $("header").load("/base/header.html");
+            $("nav").load("/base/nav.html");
+            $("footer").load("/base/footer.html");
+        });
+    </script>
+
+</head>
+
+
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <!-- 头部区 -->  
+        <div class="header" style="background-image: url('./img/bg2.webp'); color: black;"> 
+            <h1>XXXX's webpage! | 欢迎 </h1>
+            <span>welcome to my webpage ..., you can .....</span>
+            <span> If you ...</span>
+        </div>
+
+        <!-- 内容区 -->
+        <div class="content">
+            <!-- 每个colum类作为一个大的栏目-->
+            <div class="column">
+                <div class="title">Contact </div>
+                <ul class="information">
+                    <li class="name">xxx xxx </li>  
+                    <li class="institution">Nuclear Theory and Nuclear Astrophysics Group,Sun Yat-sen University</li>
+                    <li class="email">xxxx@mail.sysu.edu.cn</li>
+                    <li class="phone">xxxxxxxx</li>
+                    <li class="location">中国广东省珠海市香洲区唐家湾大学路2号中山大学</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <div class="title">Research</div>
+                <!--每个item是该colum下的子项 -->
+                <div class="item">
+                    <div class="item-title">Research interests</div>
+                    <ul>
+                        <li>
+                            <!-- Research interests 下的一个主题-->
+                            <h3>1.无中微子双贝塔衰变</h3>
+                            <p>
+                            无中微子双贝塔衰变是当前国际上粒子物理与核物理研究领域的重要科学前沿，是可能突破粒子物理标准模型的研究方向之一 。通过寻找原子核无中微子双贝塔衰变有望回答或者解决一些基本的科学问题，包括轻子数是否守恒，中微子是否具有马约拉纳属性以及中微子的绝对质量标度等。这些问题的回答以及解决有助于理解宇宙中正反物质不对称之谜等重大科学问题。
+                            <figure>
+                                <img src="./img/neutrinoless-double-beta-img1.png" style="width: 600px; ">
+                                <figcaption>图1. 原子核发生(a)两中微子双贝塔衰变以及(b)标准衰变机制下无中微子双贝塔衰变示意图
+                                </figcaption>
+                            </figure>
+                            </p>
+
+                            <p>
+                                鉴于无中微子双贝塔衰变的重要研究意义，我国自然科学基金委-中国学科发展战略丛书、美国能源部-核物理长期发展规划以及欧洲科学长期发展规划书中, 都把无中微子双贝塔衰变研究列为优先资助的大科学项目。在无中微子双贝塔衰变研究中，核矩阵元大小直接决定衰变的快慢，影响中微子质量确定的精度。因此核矩阵元的研究是最关键的理论研究课题之一。
+
+                            </p>
+                        </li>
+
+                        <li>
+                            <!-- Research interests 下的一个主题-->
+                            <h3>2. 原子核结构的第一性原理计算</h3>
+                            
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">Publications</div>
+                    <ul>
+                        <li>1. xxxxxxxx</li>
+                        <li>2. bbbbbbbb</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="column">
+                <div class="title">Fun</div>
+                My FUN
+            </div>
+
+            <div class="column">
+                <div class="title">Others</div>
+                <div class="item">
+                    <div class="item-title">Others 1</div>
+                      description....... 
+                </div>
+            </div>           
+        </div>
+
+
+    </main>
+        
+    <footer></footer>
+
+</body>

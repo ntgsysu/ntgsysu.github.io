@@ -1,0 +1,57 @@
+@import url(base.css);
+main .topics-list {
+  padding-top: 50px;
+}
+main .topics-list .topic-card {
+  position: relative;
+  height: 250px;
+  width: 100%;
+  box-shadow: 0 0 10px #999;
+  margin-bottom: 50px;
+  border-radius: 5px;
+}
+main .topics-list .topic-card .side-img {
+  float: left;
+  height: 225px;
+  width: 270px;
+  margin: 5px 5px;
+  padding: 5px 5px;
+  overflow: hidden;
+}
+main .topics-list .topic-card .side-img img {
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+}
+main .topics-list .topic-card .side-text {
+  float: right;
+  width: 73%;
+  height: 225px;
+  margin: 5px 5px;
+  padding: 5px 5px;
+}
+main .topics-list .topic-card .side-text .title {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+}
+main .topics-list .topic-card .side-text .description {
+  font-size: 16px;
+  padding: 5px 10px;
+  text-align: justify;
+}
+main .topics-list .topic-card a {
+  color: blue;
+}
+main .topics-list .topic-card:nth-of-type(2n) .side-img {
+  float: left;
+}
+main .topics-list .topic-card:nth-of-type(2n) .side-text {
+  float: right;
+}
+main .topics-list .topic-card:nth-of-type(2n+1) .side-img {
+  float: left;
+}
+main .topics-list .topic-card:nth-of-type(2n+1) .side-text {
+  float: right;
+}

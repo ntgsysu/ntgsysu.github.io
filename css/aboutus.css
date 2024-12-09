@@ -1,0 +1,28 @@
+@import url(base.css);
+main {
+  background-color: #e0e0e0;
+}
+main .container {
+  padding: 5px 50px ;
+  background-color: #fff;
+}
+main .container::before {
+  content: 'About Us';
+  font-size: 25px;
+  color: #005826;
+}
+main .container .group-img {
+  text-align: center;
+}
+main .container .group-img img {
+  width: 45%;
+}
+main .container .introduction {
+  color: #666;
+  font-size: 16px;
+  text-align: justify;
+}
+main .container .introduction ul > li {
+  margin-left: 40px;
+  list-style: circle;
+}

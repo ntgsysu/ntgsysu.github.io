@@ -1,0 +1,63 @@
+@import './sidenav.less';
+@import './style.less';
+main{
+    margin-left: 210px;
+    // background-color: red;
+    height: 100%;
+    display: block;
+
+    #addPublication{
+        font-size: 14px;
+        line-height: 20px;
+        #addPublication_form{
+            .item{
+                // background-color: red;
+                label{
+                    margin-right: 16px;
+                    margin-top: 20px;
+                    width: 30%;
+                    text-align: right;
+                    display: inline-block;
+                    color: @text-color-default;
+                }
+                //通用样式
+                .input{
+                    width: 40%;
+                    height: 40px;
+                    // background-color: red;
+                    // margin: 5px;
+                    display: inline-block;
+                    input{
+                        width: 400px;
+                        height: 24px;
+                        border: 2px solid @border-color;
+                        border-radius: 5px;
+                        color:@form-text-color;
+                        // margin: 5px;
+                        outline-style: none;
+                        
+                    }
+                    input:focus{
+                        border: 1px solid #0085BD;
+                        // height: 24px;
+                        //border-color: @border-color-focus;
+                    }       
+                }
+            }
+        }
+        
+  
+        button#submit{
+            width: 80px;
+            height: 30px;
+            background-color: @button-color;
+            border-radius: 5px;
+            color: #ffffff;
+            border: 1px transparent solid;
+            margin-left: 40%;
+            margin-top: 20px;
+
+        }
+    }
+
+}

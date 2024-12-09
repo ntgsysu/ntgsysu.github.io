@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nuclear Theory Group @ SYSU</title>
+        <link rel="icon" href="/base/logo/favicon.ico">
+        
+        <link rel="stylesheet" href="/fa/css/all.css">
+        <link rel="stylesheet" href="/css/index.css">
+        <script type="text/javascript"src="https://code.jquery.com/jquery-1.4.1.min.js"></script>
+        <script src="./js/banner.js"></script>
+        <script src="./js/index.js"></script>
+        <script src="./js/indexRender.js"></script>
+        <script>
+            $(function(){
+                $("header").load("/base/header.html");
+                $("nav").load("/base/nav.html");
+                $("footer").load("/base/footer.html");
+            });
+        </script>
+</head>
+
+
+<body>
+    <header></header>
+    <nav></nav>
+
+    <div class="banner clearfix" >
+        <div class="container">
+           <div class="arrows left"><i class="fa fa-angle-left"></i></div>
+           <div class="arrows right"><i class="fa fa-angle-right"></i></div>
+            <ul class="banner-list" id="bannerImg"></ul>
+            <div class="bottom-list"></div>
+        </div>
+   
+           
+       </div>
+    
+    <main>
+        <div class="exhibition w">
+
+            <div class="news">
+                <div class="part-name">
+                    <h1>News</h1>
+                    <div class="more">
+                        <a href="events/news.html">More
+                            <i class="fa fa-angle-double-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <ul id="newsList">
+                    <!-- 添加li，添加通知 -->    
+                </ul>
+            </div>
+
+            <div class="journalclub">
+                <div class="part-name">
+                    <h1>Journal Club</h1>
+                    <div class="more">
+                        <a href="/events/journal_club.html">More
+                            <i class="fa fa-angle-double-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <ul id="journalclubList">
+                </ul>
+            </div>
+
+            <div class="conference">
+                <div class="part-name">
+                    <h1>学术会议</h1>
+                    <div class="more">
+                        <a href="/events/conference.html">More
+                            <i class="fa fa-angle-double-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <ul id="conferenceList">
+   
+                </ul>
+
+
+            </div>
+
+            <div class="seminar">
+                <div class="part-name">
+                    <h1>学术报告</h1>
+                    <div class="more">
+                        <a href="/events/seminar.html">More
+                            <i class="fa fa-angle-double-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <ul id="seminarList">
+                </ul>
+            </div>
+
+            <div class="research">
+                <div class="part-name">
+                    <h1>RESEARCH TOPICS</h1>
+                    <div class="more">
+                        <a href="/research/topics/topics.html">More
+                            <i class="fa fa-angle-double-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="text-list">
+                    <ul id="topicsList">
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="spare-time">
+                <div class="part-name">
+                    <h1>SPARE TIME</h1>
+                    <div class="more">
+                        <a href="/events/sparetime/sparetime.html">More
+                            <i class="fa fa-angle-double-right"></i>
+                        </a>
+                    </div>
+                </div>
+                 <!-- 左右箭头按钮 -->
+                <div class="arrows left"><i class="fa fa-angle-left"></i></div>
+                <div class="arrows right"><i class="fa fa-angle-right"></i></div>
+
+                <ul id="spareImg"></ul>
+
+            </div>
+            
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+</html>

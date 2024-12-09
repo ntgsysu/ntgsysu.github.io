@@ -1,0 +1,150 @@
+@import './sidenav.less';
+@import './style.less';
+main{
+    margin-left: 210px;
+    // background-color: red;
+    height: 100%;
+    display: block;
+
+    #addNews{
+        font-size: 14px;
+        line-height: 20px;
+        #addNews_form{
+            .item{
+                // background-color: red;
+                label{
+                    margin-right: 16px;
+                    margin-top: 20px;
+                    width: 30%;
+                    text-align: right;
+                    display: inline-block;
+                    color: @text-color-default;
+                }
+                //通用样式
+                .input{
+                    width: 40%;
+                    height: 40px;
+                    // background-color: red;
+                    // margin: 5px;
+                    display: inline-block;
+                    input{
+                        height: 24px;
+                        border: 2px solid @border-color;
+                        border-radius: 5px;
+                        color:@form-text-color;
+                        // margin: 5px;
+                        outline-style: none;
+                        
+                    }
+                    input:focus{
+                        border: 1px solid #0085BD;
+                        // height: 24px;
+                        //border-color: @border-color-focus;
+                    }       
+                }
+
+                #news_title{
+                    width: 450px;
+                }  
+
+                .time{
+                    width: 250px;
+                    height: 30px;
+                    border: 2px solid @border-color;
+                    border-radius: 5px;
+                    color:@form-text-color;
+                    // margin: 5px;
+                    // position: relative;
+                    input{
+                        width: 180px;
+                        position: relative;
+                        height: 20px;
+                        margin: 2px;
+                        margin-left:5px;
+                        margin-right: 5px;
+                        border: none;
+                        text-align: center;
+                    }
+             
+
+                }
+
+                #news_link{
+                    width: 400px;
+                    height: 15px;
+                }
+
+                label[for='news_content']{
+                    height: 100%;
+                    vertical-align: top;
+                }
+                #news_content{
+                    display: inline-block;
+                    width: 700px;
+                    height: 250px;
+                    border: 2px solid @border-color;
+                    outline-style: none;
+                }
+                #news_content:focus{
+                    border: 1px solid #0085BD;
+                }
+
+
+            }
+            #news_imgs{
+                width: 200px;
+            }
+            #imgs_link{
+                margin-left: 31% ;
+                margin-bottom: 50px;
+                // height: 30px;
+                // background-color: red;
+                &>label{
+                    // height: 25px;
+                    margin: 2px ;
+                    width: 300px;
+                    border: 2px solid @border-color;
+                    text-align: center;
+                    border-radius: 10px;
+                    background-color: #999;
+                    overflow:hidden;
+                    // float: left;
+                }
+                label:hover{
+                    background-color: #0085BD;
+                    // cursor: grab;
+
+                }
+                input{
+                    width: 400px;
+                    display: block;
+                }
+
+            }
+            #submitImgs{
+                width: 70px;
+                margin: 2px;
+                height: 25px;
+                background-color:deepskyblue;
+                border-radius: 5px;
+                color: #ffffff;
+                border: 1px transparent solid;
+                // margin-left: 45%;
+            }
+        }
+        
+  
+        button#submit{
+            width: 80px;
+            height: 30px;
+            background-color: @button-color;
+            border-radius: 5px;
+            color: #ffffff;
+            border: 1px transparent solid;
+            margin-left: 45%;
+            margin-top: 20px;
+
+        }
+    }
+
+}

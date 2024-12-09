@@ -1,0 +1,233 @@
+.sidebar {
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(#141e30, #243b55);
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 10px;
+  overflow: auto;
+}
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menu li {
+  margin-bottom: 10px;
+}
+.menu a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+.menu .show {
+  display: block;
+}
+.submenu li {
+  margin-bottom: 5px;
+}
+.submenu a {
+  display: block;
+  padding: 5px;
+  padding-left: 20px;
+  text-decoration: none;
+  color: #ddd;
+}
+body {
+  background-color: #faf8fc;
+}
+main {
+  margin-left: 210px;
+  height: 100%;
+  display: block;
+  display: flex;
+}
+main #displayJClub {
+  font-size: 14px;
+  line-height: 20px;
+  width: 70%;
+}
+main #displayJClub #displayJClub_form {
+  margin-left: 5%;
+}
+main #displayJClub #displayJClub_form .item label {
+  margin-right: 16px;
+  margin-top: 20px;
+  width: 35%;
+  text-align: right;
+  display: inline-block;
+  color: #3A4E64;
+}
+main #displayJClub #displayJClub_form .item .input {
+  width: 60%;
+  height: 40px;
+  display: inline-block;
+}
+main #displayJClub #displayJClub_form .item .input input {
+  height: 24px;
+  border: 2px solid #EAEDF1;
+  border-radius: 5px;
+  color: #5E6470;
+  outline-style: none;
+}
+main #displayJClub #displayJClub_form .item .input input:focus {
+  border: 1px solid #0085BD;
+}
+main #displayJClub #displayJClub_form .item #jc_title {
+  width: 450px;
+}
+main #displayJClub #displayJClub_form .item .time {
+  width: 450px;
+  height: 30px;
+  border: 2px solid #EAEDF1;
+  border-radius: 5px;
+  color: #5E6470;
+}
+main #displayJClub #displayJClub_form .item .time input {
+  width: 180px;
+  position: relative;
+  height: 20px;
+  margin: 2px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border: none;
+  text-align: center;
+}
+main #displayJClub #displayJClub_form .item .time input[type=datetime-local]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 0;
+  padding-left: 100%;
+  visibility: hidden;
+}
+main #displayJClub #displayJClub_form .item .time input[type=datetime-local]:focus::-webkit-calendar-picker-indicator {
+  visibility: visible;
+}
+main #displayJClub #displayJClub_form .item #jc_paper_title {
+  width: 450px;
+}
+main #displayJClub #displayJClub_form .item #jc_paper_link {
+  width: 450px;
+  height: 15px;
+}
+main #displayJClub #displayJClub_form .item label[for='jc_paper_abstract'] {
+  height: 100%;
+  vertical-align: top;
+}
+main #displayJClub #displayJClub_form .item #jc_paper_abstract {
+  display: inline-block;
+  width: 450px;
+  height: 250px;
+  border: 2px solid #EAEDF1;
+  outline-style: none;
+}
+main #displayJClub #displayJClub_form .item #jc_paper_abstract:focus {
+  border: 1px solid #0085BD;
+}
+main #displayJClub #displayJClub_form h3 {
+  color: #666;
+  font-size: 18px;
+  margin-left: 55%;
+}
+main #displayJClub .button_event {
+  margin-left: 50%;
+  margin-top: 20px;
+}
+main #displayJClub .button_event button {
+  width: 80px;
+  height: 30px;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 1px transparent solid;
+  display: inline-block;
+  margin: 20px;
+}
+main #displayJClub .button_event #delete {
+  background-color: red;
+}
+main #displayJClub .button_event #delete:active {
+  background-color: black;
+}
+main #displayJClub .button_event #submit {
+  background-color: #45b536;
+}
+main #displayJClub .button_event #submit:active {
+  background-color: black;
+}
+main #jclubList {
+  width: 40%;
+  min-height: 200px;
+  border-left: 1px solid #EAEDF1;
+  padding-left: 10px;
+}
+main #jclubList h3 {
+  color: #666;
+  font-size: 18px;
+  text-align: center;
+}
+main #jclubList .search {
+  height: 40px;
+  font-size: 12px;
+  line-height: 40px;
+  color: #5E6470;
+  padding: 10px;
+  border: 2px solid #666;
+  border-radius: 10px;
+}
+main #jclubList .search input {
+  width: 100px;
+  border-radius: 5px;
+  border: 2px solid #EAEDF1;
+  color: #999;
+  margin-right: 15px;
+  margin-left: 5px;
+}
+main #jclubList .search #search_speaker {
+  width: 60px;
+}
+main #jclubList .search #search_button {
+  float: right;
+  height: 40px;
+  width: 45px;
+  border: none;
+  color: #fff;
+  border-radius: 10px;
+}
+main #jclubList .search #search_button:active {
+  background-color: gray;
+}
+main #jclubList .list {
+  list-style: none;
+  padding-left: 0px;
+  font-size: 14px;
+}
+main #jclubList .list li {
+  margin-top: 10px;
+  height: 30px;
+  line-height: 30px;
+  overflow: hidden;
+  border: 1px solid #EAEDF1;
+  border-radius: 10px;
+}
+main #jclubList .list li div {
+  margin-left: 5px;
+  display: inline-block;
+}
+main #jclubList .list li .startTime {
+  width: 80px;
+}
+main #jclubList .list li .speaker {
+  width: 50px;
+}
+main #jclubList .list li:hover {
+  border: 1px solid green;
+  cursor: pointer;
+}

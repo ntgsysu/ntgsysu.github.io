@@ -1,0 +1,56 @@
+main {
+  font-family: Georgia, Arial, Helvetica, "Microsoft YaHei", sans-serif;
+  min-height: 550px;
+}
+main .content {
+  background-color: rgba(224, 224, 224, 0.1);
+  padding: 0 5px;
+}
+main .content .title {
+  font-size: 26px;
+  text-align: center;
+  line-height: 100px;
+}
+main .content .introduce p {
+  font-size: 18px;
+  text-align: justify;
+}
+main .content .introduce p::before {
+  content: '';
+  display: inline-block;
+  width: 36px;
+}
+main .content .introduce figure {
+  margin: 15px auto;
+  width: 600px;
+}
+main .content .introduce figure img {
+  width: 600px;
+}
+main .content .introduce figure figcaption {
+  text-align: center;
+}
+main .content .direction {
+  margin: 10px 0;
+  background-color: rgba(144, 181, 165, 0.5);
+  padding: 5px;
+  font-size: 20px;
+}
+main .content .direction ul {
+  font-size: 16px;
+}
+main .content .direction ul li {
+  height: 20px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  margin: 10px 10px;
+}
+main .content .direction ul li::before {
+  display: inline-block;
+  content: '';
+  width: 5px;
+  height: 20px;
+  margin-right: 5px;
+  background-color: green;
+}

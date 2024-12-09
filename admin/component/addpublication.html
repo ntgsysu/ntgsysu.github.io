@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/base/logo/atomicon.ico">
+    <title>添加论文信息</title>
+    <link rel="stylesheet" href="../css/addpublication.css">
+    <script src="../js/sideNav.js" type="module"></script>
+</head>
+<body>
+   <main>
+    <h2 style="text-align: center; color:grey;">添加论文信息</h2>
+
+    <div id="addPublication">
+        <form id="addPublication_form">
+   
+            <div class="item">
+                <label for="year">Year</label>
+                <div class="input"><input type="text" id="year" value="preprint"></div>
+            </div>
+            <div class="item">
+                <label for="title">Title</label>
+                <div class="input"><input type="text" id="title"></div>
+            </div>
+            <div class="item">
+                <label for="author">Authors</label>
+                <div class="input"><input  id="author" ></div>
+            </div>
+            <div class="item">
+                <label for="journal">Journal</label>
+                <div class="input"><input  id="journal" ></div>
+            </div>
+            <div class="item">
+                <label for="arxiv">Arxiv</label>
+                <div class="input"><input type="url" id="arxiv"></div>
+            </div>
+            <div class="item">
+                <label for="doi">DOI</label>
+                <div class="input"><input  id="doi"  type="url"></div>
+            </div>
+            <div class="item">
+                <label for="pdf">PDF</label>
+                <div class="input"><input type="file" id="pdf"></div>
+            </div>
+
+        
+    
+            <button type='button' onclick="addPublicationData('addPublication_form')" id="submit">提交</button><br>
+        </form>
+    </div>
+   </main>
+
+   <script src="../js/publication.js"></script>
+    
+</body>
+</html>

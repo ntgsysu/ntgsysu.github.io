@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/base/logo/atomicon.ico">
+    <title>添加报告</title>
+    <link rel="stylesheet" href="../css/addseminar.css">
+    <script src="../js/sideNav.js" type="module"></script>
+    
+
+</head>
+<body>
+   <main>
+    <h2 style="text-align: center; color:grey;">添加报告</h2>
+
+    <div id="addSeminar">
+        <form id="addSeminar_form">
+            <div class="item">
+                <label for="seminar_title">标题</label>
+                <div class="input"><input type="text" id="seminar_title"></div>
+            </div>
+            <div class="item">
+                <label for="seminar_reporter">报告人</label>
+                <div class="input"><input type="text" id="seminar_reporter"></div>
+            </div>
+            <div class="item">
+                <label for="seminar_inviter">邀请人</label>
+                <div class="input"><input type="text" id="seminar_inviter"></div>
+            </div>
+            
+            <div class="item">
+                <label for="seminar_startTime">时间</label>
+                <div class="input time"><input  id="seminar_startTime" placeholder="开始时间" type="datetime-local" > ~ <input id="seminar_endTime" placeholder="结束时间" type="datetime-local"></div>
+            </div>
+            <div class="item">
+                <label for="seminar_room">地点</label>
+                <div class="input"><input type="text" id="seminar_room"></div>
+            </div>
+            <div class="item">
+                <label for="seminar_img">海报</label>
+                <input type="file" accept="image/png, image/jpeg" id="seminar_img" >  
+            </div>
+            <div class="item">
+                <label for="seminar_ppt">PPT</label>
+                <input type="file" id="seminar_ppt" >  
+            </div>
+
+            <button type='button' onclick="addSeminarDataWithFile('addSeminar_form')" id="submit">提交</button><br>
+        </form>
+    </div>
+   </main>
+
+   <script src="../js/seminar.js"></script>
+    
+</body>
+</html>

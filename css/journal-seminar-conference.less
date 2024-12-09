@@ -1,0 +1,360 @@
+@import url(./base.css);
+
+@web-width:1200px;
+// @class-nav-height:60px;
+@content-years-nav-height:60px;
+
+main{
+    background-color: rgb(246, 246, 246);
+
+    .content{
+        min-height: 700px;
+        #years-nav{
+            height: @content-years-nav-height;
+            background-color: #fff;
+            padding-top: 5px;
+            margin-bottom: 40px;
+            font-size: 20px;
+            color: #666;
+            li{
+                float: left;
+                margin-left: 20px;
+                line-height: @content-years-nav-height;
+                padding-left: 20px;
+                padding-right: 20px;
+
+            }
+
+        }
+        
+    }
+}
+
+@journal-club-color:rgb(0 ,88,38);
+@journal-club-hover-color:#40735d;
+@report-color: rgb(197,130,72);
+@report-hover-color:rgba(197,130,72,0.7);
+@conference-color: rgb(26,100,160);
+@conference-hover-color:rgba(26,100,160,0.7);
+
+
+.journal-club{
+    #renderPlace{
+        flex-shrink: 0;
+        width: @web-width;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        &>div{
+            // 每个小块的布局设计
+            flex-shrink: 0;
+            width: 500px;
+            height: 200px;
+            background-color:#fff;
+            margin:20px 30px;
+            border-radius:2%;
+            box-shadow: 0px 10px 20px #999;
+            overflow: hidden;
+            a{
+                display: block;
+            }
+
+            & div{
+                color: #666;
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+
+            .title{
+                height: 80px;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                padding: 0 5px;
+            }
+
+            .time{
+                &::before{
+                    font-family: 'Font Awesome 6 Brands','Font Awesome 6 Free';
+                    font-weight: 600;
+                    content:'\f133';
+                    font-size: 20px;
+                    display: inline-block;
+                    margin: 0 5px;
+                }
+            }
+
+            .speaker{
+                &::before{
+                    font-family: 'Font Awesome 6 Brands','Font Awesome 6 Free';
+                    font-weight: 600;
+                    content: '\f007';
+                    font-size: 20px;
+                    display: inline-block;
+                    margin: 0 5px;
+                }
+            }
+
+            .location{
+                &::before{
+                    font-family: 'Font Awesome 6 Brands','Font Awesome 6 Free';
+                    font-weight: 600;
+                    content: '\f124';
+                    font-size: 20px;
+                    display: inline-block;
+                    margin: 0 5px;
+                }    
+            }
+        }
+    }
+
+    #renderPlace{
+        // 卡片标题背景色
+        .title{
+        background-color:@journal-club-color;
+        color: #fff;
+        }
+        //图标颜色
+        &>div div::before{
+            color: @journal-club-color;
+        }
+
+    }
+
+    //被选中的年份 背景颜色设置
+    #years-nav .active{
+        background-color:@journal-club-color;
+        color: #fff;
+    }
+
+    //hover年份导航栏背景颜色
+    #years-nav li:hover{
+        background-color:@journal-club-hover-color;
+        color: #fff;
+    }
+
+
+}
+
+
+
+.report{
+
+    #renderPlace{
+        flex-shrink: 0;
+        width: @web-width;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        &>div{
+            flex-shrink: 0;
+            width: 500px;
+            height: 220px;
+            background-color:#fff;
+            margin:20px 30px;
+            border-radius:2%;
+            box-shadow: 0px 10px 20px #999;
+            overflow: hidden;
+            a{
+                display: block;
+            }
+            & div{
+                color: #666;
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+            .title{
+                height: 80px;
+                color: #fff;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                padding: 0 5px;
+            }
+
+            .time{
+                &::before{
+                    content:'时间：';
+                    font-size: 18px;
+                    display: inline-block;
+                    margin: 0 5px;
+                }
+            }
+
+            .speaker{
+                &::before{
+                    content: '报告人：';
+                    font-size: 18px;
+                    display: inline-block;
+                    margin: 0 5px;
+                }
+            }
+
+            .location{
+                &::before{
+                    content: '地点：';
+                    font-size: 18px;
+                    display: inline-block;
+                    margin: 0 5px;
+                }
+                
+            }
+                
+            .inviter{
+                &::before{
+                    content: '邀请人：';
+                    font-size: 18px;
+                    display: inline-block;
+                    margin: 0 5px;
+                }
+                
+            }
+
+        }
+    }
+    #renderPlace{
+        // 卡片标题背景色
+        .title{
+        background-color:@report-color;
+        color: #fff;
+        }
+        //图标颜色
+        &>div div::before{
+            color: @report-color;
+        }
+
+    }
+
+    
+    //被选中的年份 背景颜色设置
+    #years-nav .active
+    {
+        background-color:@report-color;
+        color: #fff;
+    }
+
+    //hover年份导航栏背景颜色
+    #years-nav li:hover{
+        background-color:@report-hover-color;
+        color: #fff;
+    }
+
+  
+}
+
+.conference{
+    #renderPlace{
+        flex-shrink: 0;
+        width: @web-width;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: flex-start;
+        &>div{
+            flex-shrink: 0;
+            width: 500px;
+            height: 220px;
+            background-color:#fff;
+            margin:20px 30px;
+            border-radius:2%;
+            box-shadow: 0px 10px 20px #999;
+            overflow: hidden;
+            a{
+                display: block;
+            }
+            & div{
+                color: #666;
+                font-size: 18px;
+                margin-bottom: 5px;
+            }
+            .title{
+                text-align: justify;
+                height: 120px;
+                color: #fff;
+                font-size: 18px;
+                display: flex;
+                align-items: center;
+                padding: 0 5px;
+            }
+
+            .time{
+                &::before{
+                    content:'时间：';
+                    font-size: 18px;
+                    display: inline-block;
+                    margin: 0 5px;
+                }
+            }
+
+            .location{
+                &::before{
+                    content: '地点：';
+                    font-size: 18px;
+                    display: inline-block;
+                    margin: 0 5px;
+                }
+                
+            }
+
+        }
+    }
+    
+    #renderPlace{
+        // 卡片标题背景色
+        .title{
+        background-color:@conference-color;
+        color: #fff;
+        }
+        //图标颜色
+        &>div div::before{
+            color: @conference-color;
+        }
+
+    }
+   
+    //被选中的年份 背景颜色设置
+    #years-nav .active{
+        background-color:@conference-color;
+        color: #fff;
+    }
+    //hover年份导航栏背景颜色
+    #years-nav li:hover{
+        background-color:@conference-hover-color;
+        color: #fff;
+    }
+
+}
+
+
+
+// //动态切换效果
+// .content{
+
+//     // 分类年份卡片设置切换效果
+//     .year-items{
+//         transition: 1s transform ease-in-out;
+//     }
+//     // hover卡片放大效果
+//    .content-items-all>.year-items>div:hover{
+//         transition: transform 0.5s ease-in;
+//         transform:  scale(1.1);
+
+//     }
+
+//     //年份左右切换效果
+//     input[type="radio"]:nth-of-type(1):checked ~ .content-items-all .year-items{
+//         transform: translateX(0%);
+//     }
+//     input[type="radio"]:nth-of-type(2):checked ~ .content-items-all .year-items{
+//         transform: translateX(-100%);
+//     }
+//     input[type="radio"]:nth-of-type(3):checked ~ .content-items-all .year-items{
+//         transform: translateX(-200%);
+//     }
+
+// }
+
+
+

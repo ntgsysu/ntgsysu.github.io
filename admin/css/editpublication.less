@@ -1,0 +1,110 @@
+@import './sidenav.less';
+@import './style.less';
+main{
+    margin-left: 210px;
+    // background-color: red;
+    height: 100%;
+    display: block;
+    display: flex;
+    #display{
+        width: 70%;
+        #editPublication{
+            font-size: 14px;
+            line-height: 20px;
+            #editPublication_form{
+                .item{
+                    // background-color: red;
+                    label{
+                        margin-right: 16px;
+                        margin-top: 20px;
+                        width: 30%;
+                        text-align: right;
+                        display: inline-block;
+                        color: @text-color-default;
+                    }
+                    //通用样式
+                    .input{
+                        width: 40%;
+                        height: 40px;
+                        // background-color: red;
+                        // margin: 5px;
+                        display: inline-block;
+                        input{
+                            width: 500px;
+                            height: 24px;
+                            border: 2px solid @border-color;
+                            border-radius: 5px;
+                            color:@form-text-color;
+                            // margin: 5px;
+                            outline-style: none;
+                            
+                        }
+                        input:focus{
+                            border: 1px solid #0085BD;
+                            // height: 24px;
+                            //border-color: @border-color-focus;
+                        }       
+                    }
+
+                }
+            } 
+        }
+        .button_event{
+            margin-left: 50%;
+            margin-top: 20px;
+            button{
+                width: 80px;
+                height: 30px;
+                color: #ffffff;
+                border-radius: 5px;
+                border: 1px transparent solid;
+                display: inline-block;
+                margin: 20px;
+            }
+            #submit{
+                background-color: @button-color-submit;
+            }
+            #submit:active{
+                background-color: black;;
+            }
+
+        }
+    }
+    #publicationList{
+        // background-color: #0085BD;
+        width: 40%;
+        min-height: 200px;
+        border-left: 1px solid @border-color;
+        padding-left: 10px;
+        
+        h3{
+            color: #666;
+            font-size: 18px;
+            text-align: center;
+        }
+                
+        .list{
+            list-style: none;
+            padding-left: 0px;
+            font-size: 14px;
+            li{
+                // border-bottom:1px solid @border-color;
+                margin-top: 10px;
+                height: 30px;
+                line-height: 30px;
+                overflow: hidden;
+                border: 1px solid @border-color;
+                border-radius: 10px;
+                div{
+                    margin-left: 5px;     
+                    display: inline-block;
+                }
+            }
+            li:hover{
+                border: 1px solid green;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
