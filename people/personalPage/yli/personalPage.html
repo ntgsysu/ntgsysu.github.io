@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalPage</title>
+    <link rel="icon" href="/base/logo/favicon.ico">
+
+    <link rel="stylesheet" href="/fa/css/all.css">
+    <link rel="stylesheet" href="./css/personalPage.css">
+
+    <script type="text/javascript"src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <script>
+        $(function(){
+            $("header").load("/base/header.html");
+            $("nav").load("/base/nav.html");
+            $("footer").load("/base/footer.html");
+        });
+    </script>
+
+</head>
+
+
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <!-- 头部区 -->  
+        <div class="header" style="background-image: url('./img/bg2.webp'); color: black;"> 
+            <h1>李义的个人页面 | 欢迎！ </h1>
+            <span>你好，欢迎访问我的个人页面。</span>
+            <span></span>
+        </div>
+
+        <!-- 内容区 -->
+        <div class="content">
+            <!-- 每个colum类作为一个大的栏目-->
+            <div class="column">
+                <div class="title">联系方式 </div>
+                <ul class="information">
+                    <li class="name">李义 </li>  
+                    <li class="institution">Nuclear Theory and Nuclear Astrophysics Group,Sun Yat-sen University</li>
+                    <li class="email">liyi226@mail2.sysu.edu.cn</li>
+                    <li class="phone"></li>
+                    <li class="location">中国广东省珠海市香洲区唐家湾大学路2号中山大学</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <div class="title">研究</div>
+                <!--每个item是该colum下的子项 -->
+                <div class="item">
+                    <div class="item-title">研究兴趣</div>
+                    <ul>
+                        <li>
+                            <!-- Research interests 下的一个主题-->
+                            <h3>1.To be ...</h3>
+                            <p></p>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">论文</div>
+                    <ul>
+                        
+                        <!-- <li>1. xxxxxxxx</li> -->
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="column">
+                <div class="title">教育背景</div>
+                <ul>
+                    <li>2018.09-202206 中山大学，学士</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <div class="title">兴趣</div>
+
+            </div>
+
+            <div class="column">
+                <div class="title">其他</div>
+                <div class="item">
+                    <div class="item-title">个人博客</div>
+                      我还在github上部署了个人首页: <a href="https://www.liviler.xyz">个人博客</a>，如果你感兴趣可以关注一下哦。
+                </div>
+            </div>           
+        </div>
+
+
+    </main>
+        
+    <footer></footer>
+
+</body>
