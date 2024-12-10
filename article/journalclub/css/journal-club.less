@@ -1,0 +1,186 @@
+@background-color:rgb(0 ,88,38);
+main{
+    min-height: 550px;
+    background-color: rgb(246, 246, 246);
+    div.container1{
+        padding: 10px 50px;
+        background-color: #fff;
+        font-size: 18px;
+        color: #000;
+
+        #title{
+            margin:50px auto;
+            text-align: center;
+            font-size: 26px;
+            color: @background-color;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgb(240,246,240);
+        }
+
+        #report{
+            margin: 50px 0;
+            &::before{
+                content:'Report Information';
+                display: block;
+                background-color: @background-color;
+                text-align: center;
+                width: 160px;
+                margin: 0 auto;
+                color: #fff;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+
+            #report-reporter{
+                margin:5px 0;
+                &::before{
+                    content: 'Reporter:';
+                    color: #fff;
+                    display: inline-block;
+                    background-color: @background-color;
+                    text-align: center;
+                    width: 66px;     
+                    padding: 0 5px;
+                    margin-right: 4px;
+                    font-size: 14px;
+                    border-radius: 5px;
+                    
+
+                }
+
+            }
+
+            #report-time{
+                margin:5px 0;
+                &::before{
+                    content: 'Time:';
+                    color: #fff;
+                    display: inline-block;
+                    background-color: @background-color;
+                    text-align: center;
+                    width: 66px;     
+                    padding: 0 5px;
+                    margin-right: 4px;
+                    font-size: 14px;
+                    border-radius: 5px;
+                    
+
+                }
+            }
+
+            #report-location{
+                margin:5px 0;
+                &::before{
+                    content: 'Location:';
+                    color: #fff;
+                    display: inline-block;
+                    background-color: @background-color;
+                    text-align: center;
+                    width: 66px;     
+                    padding: 0 5px;
+                    margin-right: 4px;
+                    font-size: 14px;
+                    border-radius: 5px;
+                    
+
+                }
+            }
+
+
+            #report-document{
+                margin:5px 0;
+                &::before{
+                    content: 'Document:';
+                    color: #fff;
+                    display: inline-block;
+                    background-color: @background-color;
+                    text-align: center;
+                    width: 66px;     
+                    padding: 0 5px;
+                    margin-right: 4px;
+                    font-size: 14px;
+                    border-radius: 5px;
+                    
+
+                }
+                a{
+                    color: blue;
+                }
+                
+            }
+        }
+        
+        #paper{
+            margin: 50px 0;
+
+            &::before{
+                content:'Paper Information' ;
+                display: block;
+                background-color: @background-color;
+                text-align: center;
+                width: 160px;
+                margin: 0 auto;
+                color: #fff;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+
+            #paper-title{
+                margin:5px 0;
+                &::before{
+                    content: 'Title:';
+                    color: #fff;
+                    display: inline-block;
+                    background-color: @background-color;
+                    text-align: center;
+                    width: 35px;     
+                    padding: 0 5px;
+                    margin-right: 4px;
+                    font-size: 14px;
+                    border-radius: 5px;
+                    
+
+                }
+            }
+
+            #paper-link{
+                margin:5px 0;
+                &::before{
+                    content: 'DOI:';
+                    color: #fff;
+                    display: inline-block;
+                    background-color: @background-color;
+                    text-align: center;
+                    width: 35px;
+                    padding: 0 5px;
+                    margin-right: 4px;
+                    font-size: 14px;
+                    border-radius: 5px;
+
+                }
+                a{
+                    color:blue;
+                }
+            }
+            
+            #paper-abstract{
+                margin: 10px 0;
+                text-align:justify;
+                // text-justify:inter-ideograph;
+                color: #666;
+                &::before{
+                    content: 'Abstract:';
+                    color: #fff;
+                    display: inline-block;
+                    background-color: @background-color;
+                    text-align: center;
+                    padding: 0 5px;
+                    margin: 0 auto;
+                    font-size: 14px;
+                    border-radius: 5px;
+
+                }
+            }
+        }
+    }
+}

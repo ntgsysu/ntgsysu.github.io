@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal Club {{title}}</title>
+    <link rel="icon" href="/base/logo/favicon.ico">
+    <link rel="stylesheet" href="/fa/css/all.css">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="./css/journal-club.css">
+    <script type="text/javascript"src="https://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <script>
+        $(function(){
+            $("header").load("/base/header.html");
+            $("nav").load("/base/nav.html");
+            $("footer").load("/base/footer.html");
+        });
+    </script>
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <div class="container1 w">
+            <div id="title"></div>
+            <div id="report">
+                <div id="report-reporter"></div>
+                <div id="report-time"></div>
+                <div id="report-location"></div>
+                <div id="report-document"><a>汇报PPT</a></div>
+            </div>
+            <div id="paper">
+                <div id="paper-title"></div>
+                <div id="paper-link"><a id="paper-doi" href=""></a></div>
+                <div id="paper-abstract"></div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script src="journalclub.js"></script>
+    <script>
+        renderHTMLFromJson('{{id}}')
+    </script>
+</body>
+<html>

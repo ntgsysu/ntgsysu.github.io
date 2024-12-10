@@ -1,0 +1,158 @@
+main {
+  min-height: 550px;
+  background-color: #f6f6f6;
+}
+main div.container1 {
+  padding: 10px 50px;
+  background-color: #fff;
+  font-size: 18px;
+  color: #000;
+}
+main div.container1 #title {
+  margin: 50px auto;
+  text-align: center;
+  font-size: 26px;
+  color: #005826;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f0f6f0;
+}
+main div.container1 #report {
+  margin: 50px 0;
+}
+main div.container1 #report::before {
+  content: 'Report Information';
+  display: block;
+  background-color: #005826;
+  text-align: center;
+  width: 160px;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+main div.container1 #report #report-reporter {
+  margin: 5px 0;
+}
+main div.container1 #report #report-reporter::before {
+  content: 'Reporter:';
+  color: #fff;
+  display: inline-block;
+  background-color: #005826;
+  text-align: center;
+  width: 66px;
+  padding: 0 5px;
+  margin-right: 4px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+main div.container1 #report #report-time {
+  margin: 5px 0;
+}
+main div.container1 #report #report-time::before {
+  content: 'Time:';
+  color: #fff;
+  display: inline-block;
+  background-color: #005826;
+  text-align: center;
+  width: 66px;
+  padding: 0 5px;
+  margin-right: 4px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+main div.container1 #report #report-location {
+  margin: 5px 0;
+}
+main div.container1 #report #report-location::before {
+  content: 'Location:';
+  color: #fff;
+  display: inline-block;
+  background-color: #005826;
+  text-align: center;
+  width: 66px;
+  padding: 0 5px;
+  margin-right: 4px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+main div.container1 #report #report-document {
+  margin: 5px 0;
+}
+main div.container1 #report #report-document::before {
+  content: 'Document:';
+  color: #fff;
+  display: inline-block;
+  background-color: #005826;
+  text-align: center;
+  width: 66px;
+  padding: 0 5px;
+  margin-right: 4px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+main div.container1 #report #report-document a {
+  color: blue;
+}
+main div.container1 #paper {
+  margin: 50px 0;
+}
+main div.container1 #paper::before {
+  content: 'Paper Information';
+  display: block;
+  background-color: #005826;
+  text-align: center;
+  width: 160px;
+  margin: 0 auto;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+main div.container1 #paper #paper-title {
+  margin: 5px 0;
+}
+main div.container1 #paper #paper-title::before {
+  content: 'Title:';
+  color: #fff;
+  display: inline-block;
+  background-color: #005826;
+  text-align: center;
+  width: 35px;
+  padding: 0 5px;
+  margin-right: 4px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+main div.container1 #paper #paper-link {
+  margin: 5px 0;
+}
+main div.container1 #paper #paper-link::before {
+  content: 'DOI:';
+  color: #fff;
+  display: inline-block;
+  background-color: #005826;
+  text-align: center;
+  width: 35px;
+  padding: 0 5px;
+  margin-right: 4px;
+  font-size: 14px;
+  border-radius: 5px;
+}
+main div.container1 #paper #paper-link a {
+  color: blue;
+}
+main div.container1 #paper #paper-abstract {
+  margin: 10px 0;
+  text-align: justify;
+  color: #666;
+}
+main div.container1 #paper #paper-abstract::before {
+  content: 'Abstract:';
+  color: #fff;
+  display: inline-block;
+  background-color: #005826;
+  text-align: center;
+  padding: 0 5px;
+  margin: 0 auto;
+  font-size: 14px;
+  border-radius: 5px;
+}
