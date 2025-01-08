@@ -29,10 +29,14 @@
         <li><a href="/contact/contact.html">Contact</a></li>
 
         <li id="login"><a href="/admin/login.html">Login</a></li>
+        <li id="Switch">
+            <a href="https://ntg.usys.ac.cn/" ><i class="fa fa-exchange"></i></a>
+        </li>
     </ul>
     <script>
         if(document.location.hostname == 'ntg.usys.ac.cn'){
             document.getElementById('login').hidden = true
+            document.getElementById('switch').href = "https://itp.usys.ac.cn:8080"
         }
     </script>
 
