@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalPage</title>
+    <link rel="icon" href="/base/logo/favicon.ico">
+
+    <link rel="stylesheet" href="/fa/css/all.css">
+    <link rel="stylesheet" href="./css/personalPage.css">
+
+    <script type="text/javascript"src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <script>
+        $(function(){
+            $("header").load("/base/header.html");
+            $("nav").load("/base/nav.html");
+            $("footer").load("/base/footer.html");
+        });
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+  
+
+</head>
+
+
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <!-- 头部区 -->  
+        <div class="header" style="background-image: url('./img/bg2.webp'); color: black;"> 
+            <h1>Qingyang Luo(IKUN)'s webpage! | welcome </h1>
+            <span>welcome to my webpage, you can contact me through email.</span>
+        </div>
+
+        <!-- 内容区 -->
+        <div class="content">
+            <!-- 每个colum类作为一个大的栏目-->
+            <div class="column">
+                <div class="title">Contact </div>
+                <ul class="information">
+                    <li class="name">Qingyang Luo </li>  
+                    <li class="institution">Nuclear Theory and Nuclear Astrophysics Group,Sun Yat-sen University</li>
+                    <li class="email">luoqy28@mail2.sysu.edu.cn</li>
+                    <li class="phone">1145141919810</li>
+                    <li class="location">中国广东省珠海市香洲区唐家湾大学路2号中山大学</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <div class="title">Research</div>
+                <!--每个item是该colum下的子项 -->
+                <div class="item">
+                    <div class="item-title">Research interests</div>
+                    <ul>
+                        <li>
+                            <!-- Research interests 下的一个主题-->
+                            <h3>1.\(\rm EC_{kmax}+GCM\)</h3>
+                            <p>
+                                We present a benchmark study of the generator coordinate method (GCM) combined with eigenvector
+                                where the interaction strength is treated as a controlling parameter, simulating quantum many-body systems with
+                                the phase transition from noncollective to collective states. We demonstrate that the ECkmax scheme accurately
+                                reproduces the low-lying states of the LMG model. In this scheme, the EC basis consists of the wave functions
+                                of low-lying states up to the kmax-th state of sampling Hamiltonians. Compared to \(\rm EC_1\), which only includes the
+                                wave functions of the kth state of sampling Hamiltonians for the kth state of a target Hamiltonian, the ECkmax
+                                scheme exhibits significantly improved efficiency and accuracy. This study suggests the potential utilization of
+                                the extended EC scheme as an efficient emulator for GCM calculations.
+                                continuation (EC) in two different schemes for the low-lying states of the Lipkin-Meshkov-Glick (LMG) model,
+                            </p>
+                            <p> 
+                                <figure>
+                                    <img src="./img/EC.png" style="width: 1000px; ">
+                                    <figcaption style="max-width: 800px; word-wrap: break-word; margin: 0 auto; text-align: center;">
+                                        Fig1. The basic idea how EC works. It optimize the calculation process by using the training vectors(snapshots) obtained by solving the complicated many body Hamiltonians to expand the target Hamiltonian.
+                                              In this way, the time complexities will be reduced from \(O\big(N_h^2\big)\) to \(O\big(n_b^2)\), in which \(n_b\) represents the number of training set.
+                                    </figcaption>
+                                </figure>
+                                </p>
+    
+                        </li>
+
+                        <li>
+                            <!-- Research interests 下的一个主题-->
+                            <h3>2. Schiff moment</h3>
+                            <p>
+                                to be continue
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">Publications</div>
+                    <ul>
+                        <li>1. Emulating the generator coordinate method with extended eigenvector
+                            continuation for the Lipkin-Meshkov-Glick model, <strong>Q. Y. Luo</strong>, X. Zhang, L. H. Chen, and J. M. Yao, PHYSICAL REVIEW C 110, 014309 (2024)</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="column">
+                <div class="title">Education background</div>
+                <li>
+                    <span class="date"><strong>2020.09 - 2024.06:</strong></span>
+                    Bachelor's degree, Sun Yat-sen University
+                </li>
+                <li>
+                    <span class="date"><strong>2024.09 - Present: </strong></span>
+                    Ph.D., Sun Yat-sen University
+                </li>
+            </div>
+
+
+            <div class="column">
+                <div class="title">Fun</div>
+                唱，跳，rap，篮球
+            </div>
+         
+        </div>
+
+
+    </main>
+        
+    <footer></footer>
+
+</body>

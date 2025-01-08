@@ -1,13 +1,20 @@
 [
     {
+        "img":"group2025_2.jpg",
+        "link":"/aboutus/aboutus.html"
+    },
+    {
+        "img":"group2025_1.jpg",
+        "link":"/aboutus/aboutus.html"
+    },
+    {
+        "img": "20250103.jpg"
+    },
+    {
         "img":"mini20220705-1.jpg"
     },
     {
         "img":"mini20220705-2.jpg"
-    },
-    {
-        "img":"minigroup.jpg",
-        "link":"/aboutus/aboutus.html"
     },
     {
         "img":"mini3Z2A1372.jpg"

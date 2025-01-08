@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalPage</title>
+    <link rel="icon" href="/base/logo/favicon.ico">
+
+    <link rel="stylesheet" href="/fa/css/all.css">
+    <link rel="stylesheet" href="./css/personalPage.css">
+
+    <script type="text/javascript"src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <script>
+        $(function(){
+            $("header").load("/base/header.html");
+            $("nav").load("/base/nav.html");
+            $("footer").load("/base/footer.html");
+        });
+    </script>
+
+</head>
+
+
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <!-- 头部区 -->  
+        <div class="header" style="background-image: url('./img/bg2.webp'); color: black;"> 
+            <h1>Boran Liu's webpage! | 欢迎 </h1>
+            <span>welcome to my webpage ..., you can .....</span>
+            <span> If you ...</span>
+        </div>
+
+        <!-- 内容区 -->
+        <div class="content">
+            <!-- 每个colum类作为一个大的栏目-->
+            <div class="column">
+                <div class="title">Contact </div>
+                <ul class="information">
+                    <li class="name">刘博然  (Boran Liu) </li>  
+                    <li class="institution">Nuclear Theory and Nuclear Astrophysics Group,Sun Yat-sen University</li>
+                    <li class="email">liubr7@mail2.sysu.edu.cn</li>
+                    <li class="phone">+86 198xxxx2572</li>
+                    <li class="location">中国广东省珠海市香洲区唐家湾大学路2号中山大学</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <div class="title">Research</div>
+                <!--每个item是该colum下的子项 -->
+                <div class="item">
+                    <div class="item-title">Research interests</div>
+                    <ul>
+                        <li>
+                            <!-- Research interests 下的一个主题-->
+                            <h3>1.Variation After Projection of HFB</h3>
+                            <p>
+                                Variation After Projection (VAP) combined with the Hartree-Fock-Bogoliubov (HFB) theory is a powerful method in nuclear physics, particularly for describing nuclear structure and the interplay between pairing correlations and deformation effects in atomic nuclei.
+                           
+                            </p>
+
+                            <p>
+                                Background and Motivation:(1)The Hartree-Fock-Bogoliubov (HFB) theory is a cornerstone of nuclear structure calculations. It effectively incorporates both mean-field effects and pairing correlations, allowing for the description of phenomena like superfluidity in nuclei.
+                                (2)However, the HFB wavefunction typically breaks certain symmetries of the nuclear Hamiltonian, such as particle number, angular momentum, and parity, to simplify calculations. This symmetry breaking introduces artifacts that can obscure physical insights.
+                                (3)The Variation After Projection (VAP) method addresses this issue by projecting the symmetry-restored wavefunction onto states with definite quantum numbers (e.g., particle number or angular momentum) before optimizing the wavefunction. This is more accurate than the simpler Projection After Variation (PAV) approach, where symmetry projection is performed only after the variational minimization.
+                            </p>
+                            <p>
+                                Applications in Nuclear Physics:
+(1)VAP-HFB is widely applied to study nuclear clustering phenomena, pairing correlations, and shape coexistence.
+(2)It is particularly useful in describing light nuclei, where clustering effects are pronounced (e.g., alpha clustering in 12𝐶).
+(3)In heavy nuclei, VAP-HFB helps investigate deformation, rotational bands, and pairing gaps.
+                            </p>
+                        </li>
+
+                        <li>
+                            <!-- Research interests 下的一个主题-->
+                            <h3>2. Ab initio method of Nucleus Clustering Phenomena</h3>
+                        <p>   
+                            Nuclear clustering phenomena refer to the formation of substructures, or clusters, within atomic nuclei, where groups of nucleons (such as alpha particles 𝛼) behave as coherent units. Understanding clustering is critical for explaining nuclear structure and reactions, especially in light nuclei like 12C and 8Be.
+An ab initio approach aims to describe such phenomena starting directly from the fundamental interactions between nucleons, without empirical fitting to specific nuclear properties. These methods strive to solve the nuclear many-body problem using realistic nuclear forces derived from quantum chromodynamics (QCD) or nucleon-nucleon interaction models.
+                        <p>
+                        <p>
+                            <figure>
+                                <img src="./img/Ikeda-diagram.png" style="width: 400px; ">
+                                <figcaption>图1. Ikeda-diagram
+                                </figcaption>
+                            </figure>
+                            
+                            The study of nuclear clustering phenomena holds significant importance in nuclear physics, astrophysics, and nuclear reaction mechanisms. It reveals the strong correlation among nucleons within nuclei, bridging the gap between microscopic nucleon-nucleon interactions and macroscopic nuclear structure properties. Clustering is crucial for understanding nuclear reaction processes, element synthesis, and stellar evolution. Moreover, research on clustering drives advancements in experimental techniques and theoretical models, offering new perspectives on nuclear matter behavior under extreme conditions and highlighting universal emergence phenomena in complex systems. This field not only enriches fundamental science but also has broad applications in nuclear energy and astrophysics.
+                        <p>    
+
+
+
+</li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">Publications</div>
+                    <ul>
+                        <li>1. xxxxxxxx</li>
+                        <li>2. bbbbbbbb</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="column">
+                <div class="title">Fun</div>
+                My FUN
+            </div>
+
+            <div class="column">
+                <div class="title">Others</div>
+                <div class="item">
+                    <div class="item-title">Others 1</div>
+                      description....... 
+                </div>
+            </div>           
+        </div>
+
+
+    </main>
+        
+    <footer></footer>
+
+</body>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalPage</title>
+    <link rel="icon" href="/base/logo/favicon.ico">
+
+    <link rel="stylesheet" href="/fa/css/all.css">
+    <link rel="stylesheet" href="./css/personalPage.css">
+
+    <script type="text/javascript"src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <script>
+        $(function(){
+            $("header").load("/base/header.html");
+            $("nav").load("/base/nav.html");
+            $("footer").load("/base/footer.html");
+        });
+    </script>
+
+</head>
+
+
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <!-- 头部区 -->  
+        <div class="header" style="background-image: url('./img/bg2.webp'); color: black;"> 
+            <h1>Runyan Dong's webpage! | 欢迎 </h1>
+            <span>welcome to my webpage ..., you can .....</span>
+            <span> If you ...</span>
+        </div>
+
+        <!-- 内容区 -->
+        <div class="content">
+            <!-- 每个colum类作为一个大的栏目-->
+            <div class="column">
+                <div class="title">Contact </div>
+                <ul class="information">
+                    <li class="name">Runyan Dong </li>  
+                    <li class="institution">Nuclear Theory and Nuclear Astrophysics Group,Sun Yat-sen University</li>
+                    <li class="email">dongry5@mail.sysu.edu.cn</li>
+                    <li class="phone">19855996211</li>
+                    <li class="location">中国广东省珠海市香洲区唐家湾大学路2号中山大学</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <div class="title">Research</div>
+                <!--每个item是该colum下的子项 -->
+                <div class="item">
+                    <div class="item-title">Research interests</div>
+                    <ul>
+                        <li>
+                            <!-- Research interests 下的一个主题-->
+                            <h3>原子核K同核异能态及其谱学性质</h3>
+                            <p>
+                             2021年是奥托.哈恩发现同核异能态（nuclear isomer）一百周年。原子核同核异能态是指长寿命的亚稳激发态。在"NUBASE"目前列出的2427个同位素中，有1318个同位素包含至少一个半衰期大于100ns的isomer。同核异能态目前有着重要的研究意义，不仅在天体物理中有非常特殊的作用，它还可以用于研究新型的核能储存器及核钟。
+                            <figure>
+                                <img src="C:\Users\erere\Desktop\Nuclear isomer.png" style="width: 600px; ">
+                                <figcaption>图1. 核图展示了质子数（Z）与中子数（N）的关系，其中红点表示激发能大于2 MeV且半衰期大于500纳秒的同核异能态。天然存在的核素用浅蓝色方块表示。黑线表示“幻数”位置，在这些位置，壳层间隙有利于球形核的形成。
+                                </figcaption>
+                            </figure>
+                            </p>
+
+                            <p>
+                                原子核同核异能态按照形成机制可以分为shape isomer，spin isomer和K isomer。
+
+                            </p>
+                        </li>
+
+                        <li>
+                            <!-- Research interests 下的一个主题-->
+                            <h3>2. 原子核结构的第一性原理计算</h3>
+                            
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="item">
+                    <div class="item-title">Publications</div>
+                    <ul>
+                        <li>1. xxxxxxxx</li>
+                        <li>2. bbbbbbbb</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="column">
+                <div class="title">Fun</div>
+                My FUN
+            </div>
+
+            <div class="column">
+                <div class="title">Others</div>
+                <div class="item">
+                    <div class="item-title">Others 1</div>
+                      description....... 
+                </div>
+            </div>           
+        </div>
+
+
+    </main>
+        
+    <footer></footer>
+
+</body>
