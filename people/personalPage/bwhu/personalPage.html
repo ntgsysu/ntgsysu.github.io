@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalPage</title>
+    <link rel="icon" href="/base/logo/favicon.ico">
+
+    <link rel="stylesheet" href="/fa/css/all.css">
+    <link rel="stylesheet" href="./css/personalPage.css">
+
+    <script type="text/javascript"src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+    <script>
+        $(function(){
+            $("header").load("/base/header.html");
+            $("nav").load("/base/nav.html");
+            $("footer").load("/base/footer.html");
+        });
+    </script>
+
+</head>
+
+
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <!-- 头部区 -->  
+        <div class="header" style="background-image: url('./img/bg2.webp'); color: black;"> 
+            <h1>Bowen Hu's webpage! | Welcome! </h1>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- 内容区 -->
+        <div class="content">
+            <!-- 每个colum类作为一个大的栏目-->
+            <div class="column">
+                <div class="title">Contact </div>
+                <ul class="information">
+                    <li class="name">Bowen Hu </li>  
+                    <li class="institution">Nuclear Theory and Nuclear Astrophysics Group,Sun Yat-sen University</li>
+                    <li class="email">hubw6@mail2.sysu.edu.cn</li>
+                    <li class="phone">xxxxxxxx</li>
+                    <li class="location">中国广东省珠海市香洲区唐家湾大学路2号中山大学</li>
+                </ul>
+            </div>
+
+            <div class="column">
+                <div class="title">Research</div>
+                <!--每个item是该colum下的子项 -->
+                <div class="item">
+                    <div class="item-title">Research interests</div>
+                    <ul>
+                        <li>
+                            <!-- Research interests 下的一个主题-->
+                            <h3>1.Relativistic EDF based on covariant chiral nuclear forces</h3>
+                            <p>
+                                Nuclear force (NF) has always been one of the most important subjects in the study of nuclear physics, and the study of NF is helpful to understand the structure and decay of atomic nuclei and has important scientific significance. In recent years, a series of high-precision NF have been constructed based on chiral effective field theory (ChEFT). These NF are progressively expanded by a small amount and truncated to a specific order, the error of which is determined by the order calculation rule, and provide an important input for understanding the physical phenomena in finite nuclei and neutron stars from first principles. However, such studies put very high demands on computers, which are difficult to apply to large-scale calculations of heavier nuclei on the nuclide map.
+                            <!--<figure>
+                                <img src="./img/neutrinoless-double-beta-img1.png" style="width: 600px; ">
+                                <figcaption>图1. 原子核发生(a)两中微子双贝塔衰变以及(b)标准衰变机制下无中微子双贝塔衰变示意图
+                                </figcaption>
+                            </figure>-->
+                            </p>
+
+                            <p>
+                                DFT is widely used to describe most of the entire nuclide map because of its small computational cost Structural properties of atomic nuclei. In view of this, we combine the advantages of C to construct nuclear force, and construct nuclear energy density functional (EDF) in different orders. The specific work includes drawing on the form of relativistic chiral NF in different orders and the idea of point coupling model to give the leading and next-leading order EDF. This work provides an important reference for the development of a new generation of relativistic DFT.
+                            </p>
+                        </li>
+
+                        <li>
+                            <!-- Research interests 下的一个主题
+                            <h3>2. 原子核结构的第一性原理计算</h3>
+                            -->
+                        </li>
+                    </ul>
+                </div>
+
+                <!--<div class="item">
+                    <div class="item-title">Publications</div>
+                    <ul>
+                        <li>1. None</li>
+                    </ul>
+
+                </div>-->
+
+            </div>
+
+            <div class="column">
+                <div class="title">Education background:</div>
+                <ul>
+                    <li>2020.09 - 2024.06: Bachelor's degree, Sun Yat-sen University.</li>
+                    <li>2024.09 - Present: Ph.D., Sun Yat-sen University.
+                </ul>
+            </div> 
+
+
+
+            <div class="column">
+                <div class="title">Hobbies</div>
+                <div class="item">
+                    <ul>
+                        <li>1. Mathematics: Special functions, calculation of difficult integrals.</li>
+                        <li>2. Hablo un poco de español.</li>
+                        <li>3. Swimming, cycling.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="title">Others</div>
+                
+            </div>           
+        </div>
+
+
+    </main>
+        
+    <footer></footer>
+
+</body>
