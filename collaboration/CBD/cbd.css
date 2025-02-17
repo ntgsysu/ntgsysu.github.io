@@ -1,0 +1,58 @@
+@import url(/css/base.css);
+
+a {
+    color: blue;
+}
+
+main {
+    width: 100%;
+    font-size: 18px;
+    color: #333;
+    padding: 2px;
+}
+
+main .container{
+    margin-bottom: 10px;
+}
+main h1 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 30px;
+    color: #005826;
+}
+
+main h2 {
+    font-size: 26px;
+    color: #333;
+    margin-left: 10px;
+}
+
+main .content{
+    margin-left: 80px;
+    
+}
+
+main .introduction .imgdiv{
+    text-align: center;
+}
+
+main .members .content{
+    font-size: 20px;
+    margin-left: 100px;
+    margin-top: 20px;
+    /* text-align: center; */
+}
+
+main .members .content li.header{
+    font-size: 20px;
+    color: #333;
+    /* border-bottom: 1px solid #666; */
+}
+
+main .members .content li span{
+    margin-right: 20px;
+    text-align: left;
+    display: inline-block   ;
+    width: 150px;
+}

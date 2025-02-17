@@ -1,10 +1,10 @@
 @import url(base.css);
 main {
-  background-color: #e0e0e0;
+  background-color: #fff;
+  min-height: 70vh;
 }
 main .container {
   padding: 5px 50px ;
-  background-color: #fff;
 }
 main .container::before {
   content: 'About Us';

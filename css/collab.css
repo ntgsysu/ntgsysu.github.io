@@ -1,11 +1,13 @@
 @import url(base.css);
 
 a {
-    color: inherit;
+    color: blue;
 }
+
 main {
     width: 100%;
-    font-size: 16px;
+    min-height: 70vh;
+    font-size: 18px;
     color: #666;
 }
 main h1 {
@@ -15,39 +17,8 @@ main h1 {
 
 main .column{
     margin-top: 20px;
-    margin-bottom: 100px;
-}
-
-main .column .imgdiv{
-    text-align: center;
-}
-
-main h2 {
-    font-size: 26px;
-    color: #333;
-    margin-left: 10px;
-}
-
-main .column .content{
-    margin-left: 80px;
-}
-
-main .column .content .members{
-    font-size: 20px;
-    display: inline-block;
-    margin-left: 100px;
-    margin-top: 20px;
-}
-
-main .column .content .members li.header{
-    font-size: 20px;
-    color: #333;
-    /* border-bottom: 1px solid #666; */
-}
-
-main .column .content .members li span{
-    margin-right: 20px;
-    text-align: left;
-    display: inline-block   ;
-    width: 150px;
+    margin-bottom: 40px;
+    /* padding: 18px; */
+    /* border: 2px solid #ddd; */
+    /* border-radius: 6px; */
 }
