@@ -4,6 +4,14 @@ a {
     color: blue;
 }
 
+p{
+    text-align: justify; 
+}
+
+li{
+    text-align: justify; 
+}
+
 main {
     width: 100%;
     font-size: 18px;
@@ -29,30 +37,15 @@ main h2 {
 }
 
 main .content{
-    margin-left: 80px;
+    margin-left: 40px;
     
 }
 
-main .introduction .imgdiv{
-    text-align: center;
-}
 
-main .members .content{
-    font-size: 20px;
+#cbd_institutions{
     margin-left: 100px;
-    margin-top: 20px;
-    /* text-align: center; */
 }
 
-main .members .content li.header{
-    font-size: 20px;
-    color: #333;
-    /* border-bottom: 1px solid #666; */
-}
-
-main .members .content li span{
-    margin-right: 20px;
-    text-align: left;
-    display: inline-block   ;
-    width: 150px;
+#cbd_map{
+    text-align: center;
 }

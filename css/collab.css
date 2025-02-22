@@ -4,6 +4,12 @@ a {
     color: blue;
 }
 
+p{
+    text-align: justify; 
+}
+li{
+    text-align: justify; 
+}
 main {
     width: 100%;
     min-height: 70vh;
