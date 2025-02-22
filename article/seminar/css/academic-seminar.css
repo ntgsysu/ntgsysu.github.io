@@ -1,6 +1,11 @@
+main{
+    min-height: 70vh;
+}
 main .poster{
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height:70vh;
 
 }
 
