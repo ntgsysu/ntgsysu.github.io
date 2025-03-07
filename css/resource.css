@@ -17,14 +17,13 @@ main .column .title {
 main .column .item {
   width: 200px;
   height: 80px;
-  margin: 10px 0;
   display: flex;
   justify-content: space-between;
   background-color: #f6f6f6;
   color: #666;
   border-radius: 5px;
   box-shadow: 0 0 6px #999;
-  margin: 0 5px;
+  margin: 20px 10px;
 }
 main .column .item i {
   color: #005826;
