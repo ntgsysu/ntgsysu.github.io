@@ -65,15 +65,16 @@ main{
                 font-size: 18px;
                 margin-bottom: 5px;
             }
-
-            .title{
-                height: 80px;
-                font-size: 18px;
+            .title-container{
                 display: flex;
                 align-items: center;
-                padding: 0 5px;
+                height: 80px;
+                .title{
+                    padding: 0 5px;
+                    display: inline;
+                    font-size: 18px;
+                }
             }
-
             .time{
                 &::before{
                     font-family: 'Font Awesome 6 Brands','Font Awesome 6 Free';
@@ -111,9 +112,11 @@ main{
 
     #renderPlace{
         // 卡片标题背景色
-        .title{
+        .title-container{
         background-color:@journal-club-color;
-        color: #fff;
+        .title{
+            color: #fff;
+        }
         }
         //图标颜色
         &>div div::before{

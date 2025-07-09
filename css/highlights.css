@@ -1,0 +1,17 @@
+@import url(base.css);
+main h1 {
+  text-align: center;
+  font-size: 28px;
+}
+main .highlights-list {
+  min-height: 100vh;
+  font-size: 24px;
+}
+main .highlights-list::before {
+  content: 'Research Highlights';
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 26px;
+  color: #005826;
+}

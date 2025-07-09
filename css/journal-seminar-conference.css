@@ -46,12 +46,15 @@ main .content #years-nav li {
   font-size: 18px;
   margin-bottom: 5px;
 }
-.journal-club #renderPlace > div .title {
-  height: 80px;
-  font-size: 18px;
+.journal-club #renderPlace > div .title-container {
   display: flex;
   align-items: center;
+  height: 80px;
+}
+.journal-club #renderPlace > div .title-container .title {
   padding: 0 5px;
+  display: inline;
+  font-size: 18px;
 }
 .journal-club #renderPlace > div .time::before {
   font-family: 'Font Awesome 6 Brands', 'Font Awesome 6 Free';
@@ -77,8 +80,10 @@ main .content #years-nav li {
   display: inline-block;
   margin: 0 5px;
 }
-.journal-club #renderPlace .title {
+.journal-club #renderPlace .title-container {
   background-color: #005826;
+}
+.journal-club #renderPlace .title-container .title {
   color: #fff;
 }
 .journal-club #renderPlace > div div::before {

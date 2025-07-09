@@ -19,7 +19,9 @@ function contentRender(year){
     var renderContentsArray =  dataInInputYear.map(e=>`
         <div>
             <a href="/article/journalclub/${e.id}.html">
-            <div class="title">${e.title}</div>
+            <div class="title-container">
+                <div class="title">${e.title}</div>
+            </div>
             <div class="time">${e.startTime.replace('T',' ')} ~ ${e.endTime.replace('T',' ')}</div>
             <div class="speaker">${e.speaker}</div>
             <div class="location">${e.room}</div>

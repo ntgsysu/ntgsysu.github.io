@@ -1,6 +1,11 @@
 @import url(base.css);
-main .topics-list {
-  padding-top: 50px;
+main .topics-list::before {
+  content: 'Research Topics';
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 26px;
+  color: #005826;
 }
 main .topics-list .topic-card {
   position: relative;
