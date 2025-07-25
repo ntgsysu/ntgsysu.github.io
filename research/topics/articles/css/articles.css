@@ -40,7 +40,6 @@ main .content .direction ul {
   font-size: 16px;
 }
 main .content .direction ul li {
-  height: 20px;
   line-height: 20px;
   display: flex;
   align-items: center;
@@ -53,4 +52,27 @@ main .content .direction ul li::before {
   height: 20px;
   margin-right: 5px;
   background-color: green;
+}
+main .content .extend {
+  margin: 10px 0;
+  background-color: rgba(144, 181, 165, 0.5);
+  padding: 5px;
+  font-size: 20px;
+}
+main .content .extend ul {
+  font-size: 16px;
+}
+main .content .extend ul li {
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  margin: 10px 10px;
+}
+main .content .extend ul li::before {
+  display: inline-block;
+  content: '';
+  width: 5px;
+  height: 20px;
+  margin-right: 5px;
+  background-color: blue;
 }

@@ -47,7 +47,7 @@ main{
         ul{
             font-size: 16px;
             li{
-                height: 20px;
+                // height: 20px;
                 line-height: 20px;
                 display: flex;
                 align-items:center;
@@ -63,6 +63,31 @@ main{
             }
         }
 
+    }
+    .extend{
+        margin: 10px 0;
+        background-color: rgba(144, 181, 165,0.5);
+        // color: #fff;
+        padding: 5px;
+        font-size: 20px;
+        ul{
+            font-size: 16px;
+            li{
+                // height: 20px;
+                line-height: 20px;
+                display: flex;
+                align-items:center;
+                margin: 10px 10px;
+                &::before{
+                    display: inline-block;
+                    content:'';
+                    width: 5px;
+                    height: 20px;
+                    margin-right: 5px;
+                    background-color: blue;
+                }
+            }
+        }
     }
 }
 
