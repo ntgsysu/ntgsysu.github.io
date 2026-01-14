@@ -1,10 +1,10 @@
 [
     {
-        "img":"group2025_2.jpg",
+        "img": "20260114-1.jpg",
         "link":"/aboutus/aboutus.html"
     },
     {
-        "img":"group2025_1.jpg",
+        "img": "20260114-2.jpg",
         "link":"/aboutus/aboutus.html"
     },
     {
@@ -27,5 +27,13 @@
     },
     {
         "img":"mini3Z2A1372.jpg"
+    },
+    {
+        "img":"group2025_2.jpg",
+        "link":"/aboutus/aboutus.html"
+    },
+    {
+        "img":"group2025_1.jpg",
+        "link":"/aboutus/aboutus.html"
     }
 ]
