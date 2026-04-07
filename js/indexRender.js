@@ -1,6 +1,6 @@
 window.addEventListener('load',function(){
 
-    const apiURL = `http://${document.domain}:3333`
+    const apiURL = `http://${document.domain}:443`
 
     function journalclubRender(){
         function render(data){
