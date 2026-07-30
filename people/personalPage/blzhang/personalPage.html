@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bing-Long Zhang — Personal Page</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #e8e8e0;
+    font-family: 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.7;
+    padding: 40px 20px 60px;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fffef9;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.10);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .top-bar {
+    height: 4px;
+    background: linear-gradient(90deg, #003d1f, #006633, #003d1f);
+  }
+
+  /* ── Header ── */
+  .header {
+    text-align: center;
+    padding: 48px 48px 36px;
+  }
+
+  .header .name {
+    font-family: 'Noto Serif SC', 'SimSun', serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #003d1f;
+    letter-spacing: 4px;
+    margin-bottom: 4px;
+  }
+
+  .header .name-sub {
+    font-size: 18px;
+    color: #666;
+    font-weight: 400;
+    letter-spacing: 2px;
+  }
+
+  .header .affiliation {
+    font-size: 16px;
+    color: #666;
+    margin-top: 10px;
+    letter-spacing: 1px;
+  }
+
+  .header .ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 20px;
+  }
+  .ornament .line {
+    width: 80px;
+    height: 1px;
+    background: #c9a84c;
+  }
+  .ornament .diamond {
+    width: 7px;
+    height: 7px;
+    background: #c9a84c;
+    transform: rotate(45deg);
+  }
+
+  /* ── Section ── */
+  .section {
+    padding: 28px 56px;
+    border-top: 1px solid #e5e1d5;
+  }
+
+  .section-title {
+    font-family: 'Noto Serif SC', 'SimSun', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #003d1f;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+    position: relative;
+    padding-left: 14px;
+  }
+
+  .section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 3px;
+    background: #c9a84c;
+    border-radius: 2px;
+  }
+
+  /* ── About ── */
+  .about-text {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.9;
+  }
+
+  .keywords {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .keyword-tag {
+    font-size: 13px;
+    color: #003d1f;
+    background: rgba(0,61,31,0.06);
+    border: 1px solid rgba(0,61,31,0.15);
+    padding: 4px 14px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+  }
+
+  /* ── Publications ── */
+  .pub-item {
+    margin-bottom: 24px;
+  }
+  .pub-item:last-child { margin-bottom: 0; }
+
+  .pub-index {
+    font-size: 13px;
+    color: #c9a84c;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+  }
+
+  .pub-title {
+    font-size: 17px;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1.5;
+    margin-bottom: 4px;
+  }
+
+  .pub-title a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .pub-title a:hover {
+    border-bottom-color: #c9a84c;
+  }
+
+  .pub-authors {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 2px;
+  }
+
+  .pub-authors .self {
+    font-weight: 600;
+    color: #003d1f;
+  }
+
+  .pub-venue {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+  }
+
+  /* ── Contact ── */
+  .contact-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px 40px;
+  }
+
+  .contact-list li {
+    font-size: 15px;
+    color: #444;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .contact-list .label {
+    color: #888;
+    font-size: 13px;
+    white-space: nowrap;
+    min-width: 36px;
+  }
+
+  .contact-list a {
+    color: #003d1f;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .contact-list a:hover {
+    border-bottom-color: #c9a84c;
+  }
+
+  .contact-list .full-width {
+    grid-column: 1 / -1;
+  }
+
+  /* ── Footer ── */
+  .footer {
+    text-align: center;
+    padding: 28px 56px;
+    border-top: 1px solid #e5e1d5;
+    color: #aaa;
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 640px) {
+    body { padding: 20px 12px 40px; }
+    .header { padding: 36px 28px 28px; }
+    .section { padding: 22px 28px; }
+    .contact-list { grid-template-columns: 1fr; }
+    .header .name { font-size: 28px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="top-bar"></div>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="name">张炳隆</div>
+    <div class="name-sub">Bing-Long Zhang</div>
+    <div class="affiliation">中山大学 · 物理与天文学院 · 博士后</div>
+    <div class="ornament">
+      <span class="line"></span>
+      <span class="diamond"></span>
+      <span class="line"></span>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div class="section">
+    <div class="section-title">研究兴趣</div>
+    <p class="about-text">
+      我的科研工作聚焦于<strong>轻子–原子核相互作用中的原子核多体效应</strong>，
+      致力于从原子核从头算方法出发，精确描述低能轻子–原子核散射过程，
+      并以此为基础探索中微子–原子核相干散射中的新物理信号。
+    </p>
+    <div class="keywords">
+      <span class="keyword-tag">轻子–原子核低能散射</span>
+      <span class="keyword-tag">原子核从头算方法</span>
+      <span class="keyword-tag">中微子–原子核相干散射</span>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="section">
+    <div class="section-title">联系方式</div>
+    <ul class="contact-list">
+      <li>
+        <span class="label">邮箱</span>
+        <a href="mailto:zhangblong1036@foxmail.com">zhangblong1036@foxmail.com</a>
+      </li>
+      <li>
+        <span class="label">GitHub</span>
+        <a href="https://github.com/zhangblong" target="_blank">github.com/zhangblong</a>
+      </li>
+      <li>
+        <span class="label">课题组</span>
+        <a href="http://itp.usys.ac.cn/" target="_blank">itp.usys.ac.cn</a>
+      </li>
+      <li>
+        <span class="label">ORCID</span>
+        <a href="https://orcid.org/0000-0003-4928-297X" target="_blank">0000-0003-4928-297X</a>
+      </li>
+      <li>
+        <span class="label">INSPIRE</span>
+        <a href="https://inspirehep.net/authors/2860802" target="_blank">Bing-Long Zhang</a>
+      </li>
+      <li class="full-width">
+        <span class="label">地址</span>
+        <span>中国广东省珠海市香洲区唐家湾大学路2号 中山大学翰林楼3号</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Publications -->
+  <div class="section">
+    <div class="section-title">发表论文</div>
+
+    <div class="pub-item">
+      <div class="pub-index">[ 1 ]</div>
+      <div class="pub-title">
+        <a href="https://doi.org/10.1103/PhysRevD.112.035036" target="_blank">Tensor interaction in coherent elastic neutrino-nucleus scattering</a>
+      </div>
+      <div class="pub-authors">Jiajun Liao, Jian Tang, <span class="self">Bing-Long Zhang</span></div>
+      <div class="pub-venue">Physical Review D <strong>112</strong>, 035036 (2025)</div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-index">[ 2 ]</div>
+      <div class="pub-title">
+        <a href="https://doi.org/10.1007/JHEP12(2024)074" target="_blank">Dark matter, CEνNS and neutrino new physics scrutinized by a statistical method in Xenon-based experiments</a>
+      </div>
+      <div class="pub-authors">Jian Tang, <span class="self">Bing-Long Zhang</span></div>
+      <div class="pub-venue">Journal of High Energy Physics <strong>12</strong>, 074 (2024)</div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-index">[ 3 ]</div>
+      <div class="pub-title">
+        <a href="https://doi.org/10.1103/PhysRevD.108.062004" target="_blank">Asymptotic analysis of binned likelihoods and the neutrino floor</a>
+      </div>
+      <div class="pub-authors">Jian Tang, <span class="self">Bing-Long Zhang</span></div>
+      <div class="pub-venue">Physical Review D <strong>108</strong>, 062004 (2023)</div>
+    </div>
+
+    <div class="pub-item">
+      <div class="pub-index">[ 4 ]</div>
+      <div class="pub-title">
+        <a href="https://doi.org/10.1088/1674-1137/ac68da" target="_blank">Constraints on cosmic-ray boosted dark matter in CDEX-10</a>
+      </div>
+      <div class="pub-authors">Zhan-Hong Lei, Jian Tang, <span class="self">Bing-Long Zhang</span></div>
+      <div class="pub-venue">Chinese Physics C <strong>46</strong>, 085103 (2022)</div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    中山大学 · 物理与天文学院
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+@import url(/css/base.css);
+
+main{
+    min-height: 700px;
+    margin: 0 50px;
+    font-size: 16px;
+    
+}
+
+
+.header{
+    height: 200px;
+    font-size: 20px; /*字体大小*/
+    font-family: Georgia,serif;
+    /* background-image: url("../img/banner-bg2.webp"); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: left;
+}
+
+.header h1{
+    width: 100%;
+    font-size: 40px;     /* h1的字体大小 */
+    
+}
+.header span{
+    width: 100%;
+    text-align: left;
+    padding: 0 5px;
+    
+}
+
+figure{
+    text-align: center;
+}
+
+figure img{
+    width: 600px;
+}
+figcaption{
+    font-size: 14px;
+    color: #999;
+}
+
+p{
+    color: #666;
+    
+}
+p::before{
+    content:'';
+    display: inline-block;
+    width: 32px;
+}
+
+.column{
+    margin-bottom: 50px;
+}
+
+
+.column .title{
+    background-color: #ccded4;
+    line-height: 50px;
+    border-left: 10px solid #005826;
+    font-size: 22px;
+    padding-left:5px;
+    margin-bottom: 10px;
+}
+
+.column .information {
+background-color: rgba(224, 224, 224, 0.4);
+}
+
+
+.column .information li{
+    font-size: 16px;
+    color: #666;
+}
+
+
+/* 设置信息栏目前面的小图标 */
+.column .information li::before{
+    font-family: 'Font Awesome 6 Brands','Font Awesome 6 Free';
+    font-weight: 900;
+    margin:0 10px;   
+}
+.column .information li.name::before{
+    content:'\f007';    
+}
+.column .information li.institution::before{
+    content:'\f19c';    
+}
+.column .information li.email::before{
+    content:'\f0e0';    
+}
+.column .information li.phone::before{
+    content:'\f095';    
+}
+.column .information li.location::before{
+    content:'\f124';    
+}
+
+
+/* 设置item的样式 */
+.column .item{
+    margin-bottom: 40px;
+    padding-left: 10px;
+}
+
+.column .item .item-title{
+font-size: 20px;
+}
+    /* 设置渐变的底部线 */
+.column .item .item-title::after{
+content:'';
+display: block;
+background: #215f00;  /* fallback for old browsers */      
+background: -webkit-linear-gradient(to right, rgb(33, 95, 0), rgb(228, 228, 217));  /* Chrome 10-25, Safari 5.1-6 */      
+background: linear-gradient(to right, rgb(33, 95, 0), rgb(228, 228, 217)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */      
+width: 400px;
+height: 2px;
+margin: 5px 0;
+}
+    
+.column .item ul{
+    font-size: 16px;
+    padding-left: 10px;
+}
+
+.column .item ul p{
+    font-size: 16px;
+    padding-left: 10px;
+}
