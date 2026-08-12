@@ -72,7 +72,7 @@ main #undergraduates::before {
   padding-top: 60px;
 }
 main #former::before {
-  min-height: 100px;
+  min-height: 20px;
   content: 'Former Members:';
   display: block;
   color: #005826;
