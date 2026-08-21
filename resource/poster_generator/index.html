@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="输入 SERIES、标题、报告人、时间、地点与摘要，实时生成并下载带官网二维码的高清学术海报。" />
+    <meta property="og:title" content="学术海报生成器" />
+    <meta property="og:description" content="输入信息，实时生成并下载高清学术海报" />
+    <meta property="og:image" content="og.png" />
+    <title>学术海报生成器｜NTG Poster Studio</title>
+    <link rel="icon" href="favicon.svg" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="controls.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <header class="site-header">
+        <div>
+          <p class="eyebrow">NTG POSTER STUDIO</p>
+          <h1>学术海报生成器</h1>
+        </div>
+        <p class="header-note">填写内容，右侧实时生成</p>
+      </header>
+
+      <section class="workspace" aria-label="海报编辑工作区">
+        <aside class="editor-panel">
+          <div class="panel-heading">
+            <div><span class="step">01</span><h2>编辑海报信息</h2></div>
+            <button class="text-button" id="fill-example" type="button">填充示例</button>
+          </div>
+
+          <div class="fields">
+            <label class="field field-title">
+              <span>报告标题</span>
+              <textarea id="title" rows="3" placeholder="请输入讲座或报告标题"></textarea>
+            </label>
+
+            <label class="field field-series">
+              <span>SERIES 编号</span>
+              <input id="series" type="text" placeholder="例如：02" />
+            </label>
+
+            <label class="field field-author">
+              <span>报告人</span>
+              <input id="author" type="text" placeholder="请输入作者或报告人" />
+            </label>
+
+            <div class="field field-time">
+              <label for="time">时间</label>
+              <textarea id="time" rows="2" placeholder="例如：2026年8月15日 09:00"></textarea>
+              <div class="time-picker-row">
+                <span>或点击选择日期和时间</span>
+                <input id="time-picker" type="datetime-local" aria-label="选择报告日期和时间" />
+              </div>
+            </div>
+
+            <label class="field field-location">
+              <span>地点</span>
+              <input id="location" type="text" placeholder="例如：B331" />
+            </label>
+
+            <label class="field field-abstract">
+              <span>摘要</span>
+              <textarea id="abstract" rows="8" placeholder="请输入报告摘要"></textarea>
+            </label>
+
+            <div class="field field-abstract-size">
+              <div class="range-label">
+                <label for="abstract-font-size">摘要字号</label>
+                <output id="abstract-font-size-value" for="abstract-font-size">34 px</output>
+              </div>
+              <input id="abstract-font-size" type="range" min="22" max="48" step="1" value="34" />
+            </div>
+          </div>
+
+          <div class="editor-actions">
+            <a class="download-button" id="download" href="#" download>
+              <span id="download-label">下载高清 PNG</span><span aria-hidden="true">↓</span>
+            </a>
+            <p>导出宽度 1654 px；摘要增加时，海报与摘要框会自动增高。</p>
+          </div>
+        </aside>
+
+        <section class="preview-panel" aria-label="海报实时预览">
+          <div class="preview-heading">
+            <div><span class="step">02</span><h2>实时预览</h2></div>
+            <span class="live-indicator"><i></i> LIVE</span>
+          </div>
+          <div class="poster-stage">
+            <canvas id="poster" width="1654" height="2339" aria-label="根据表单内容生成的学术海报预览"></canvas>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>

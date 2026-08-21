@@ -1,0 +1,18 @@
+学术海报生成器——普通静态网站部署说明
+
+1. 将 static-deploy 文件夹中的全部文件上传到现有网站的 poster 目录。
+2. 上传后访问：https://你的域名/poster/
+3. 在网站导航菜单中添加一个链接，指向 /poster/。
+
+必须保持以下文件位于同一个目录：
+- index.html
+- styles.css
+- controls.css
+- app.js
+- favicon.svg
+- og.png
+- ntg-qr.png
+
+该工具不需要数据库、PHP、Node.js 或第三方接口，可部署在任何支持静态文件的网站空间。
+
+如果部署在子目录，请勿单独移动 index.html；应上传文件夹内的全部文件。
