@@ -27,9 +27,15 @@ function canvasFont(size, weight = 400, family = "Arial") {
   return `${weight} ${size}px ${family}, "Microsoft YaHei", sans-serif`;
 }
 
+function mathText(value) {
+  const superscripts = {"0":"⁰","1":"¹","2":"²","3":"³","4":"⁴","5":"⁵","6":"⁶","7":"⁷","8":"⁸","9":"⁹","+":"⁺","-":"⁻","=":"⁼","(":"⁽",")":"⁾",n:"ⁿ",i:"ⁱ"};
+  const subscripts = {"0":"₀","1":"₁","2":"₂","3":"₃","4":"₄","5":"₅","6":"₆","7":"₇","8":"₈","9":"₉","+":"₊","-":"₋","=":"₌","(":"₍",")":"₎",n:"ₙ"};
+  return value.replace(/\$([^$]+)\$/g, "$1").replace(/\^\{([^}]+)\}|\^([A-Za-z0-9+\-=()]+)/g, (_, group, single) => Array.from(group || single).map(ch => superscripts[ch] || ch).join("")).replace(/_\{([^}]+)\}|_([A-Za-z0-9+\-=()]+)/g, (_, group, single) => Array.from(group || single).map(ch => subscripts[ch] || ch).join(""));
+}
+
 function splitLines(text, maxWidth) {
   const result = [];
-  for (const paragraph of (text || " ").split("\n")) {
+  for (const paragraph of mathText(text || " ").split("\n")) {
     const cjk = /[\u3400-\u9fff]/.test(paragraph);
     const tokens = cjk ? Array.from(paragraph) : paragraph.split(/\s+/);
     let line = "";
@@ -60,6 +66,47 @@ function fitLines(text, maxWidth, maxLines, startSize, minSize, weight) {
   return { size, lines: lines.slice(0, maxLines) };
 }
 
+const abstractAssetCache = new Map();
+
+function getAbstractAsset(text, size, width, onReady) {
+  const key = `${size}|${width}|${text}`;
+  if (abstractAssetCache.has(key)) return abstractAssetCache.get(key);
+  const root = document.createElement("div");
+  root.setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
+  Object.assign(root.style, { width: `${width}px`, color: "#183b35", font: canvasFont(size, 400), lineHeight: "1.38", whiteSpace: "pre-wrap", overflowWrap: "anywhere" });
+  const source = text || "—";
+  const pattern = /(\$\$[\s\S]+?\$\$|\$[^$\n]+?\$)/g;
+  let cursor = 0;
+  for (const match of source.matchAll(pattern)) {
+    if (match.index > cursor) root.append(document.createTextNode(source.slice(cursor, match.index)));
+    const raw = match[0];
+    const displayMode = raw.startsWith("$$");
+    const formula = raw.slice(displayMode ? 2 : 1, displayMode ? -2 : -1);
+    const holder = document.createElement(displayMode ? "div" : "span");
+    if (displayMode) Object.assign(holder.style, { textAlign: "center", margin: `${size * .3}px 0` });
+    try { holder.innerHTML = katex.renderToString(formula, { displayMode, throwOnError: false, output: "mathml" }); }
+    catch { holder.textContent = raw; }
+    root.append(holder);
+    cursor = match.index + raw.length;
+  }
+  root.append(document.createTextNode(source.slice(cursor)));
+  Object.assign(root.style, { position: "fixed", left: "-10000px", top: "0" });
+  document.body.append(root);
+  const height = Math.max(Math.ceil(root.scrollHeight + 8), Math.ceil(size * 1.5));
+  root.style.position = "static";
+  root.style.left = "auto";
+  const serialized = new XMLSerializer().serializeToString(root);
+  root.remove();
+  const asset = { height, image: null, loading: true };
+  abstractAssetCache.set(key, asset);
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}"><foreignObject width="100%" height="100%">${serialized}</foreignObject></svg>`;
+  const image = new Image();
+  image.onload = () => { asset.image = image; asset.loading = false; onReady(); };
+  image.onerror = () => { asset.loading = false; onReady(); };
+  image.src = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+  return asset;
+}
+
 function values() {
   return Object.fromEntries(ids.map(id => [id, fields[id].value]));
 }
@@ -87,7 +134,8 @@ function drawPoster() {
   const abstractLineHeight = abstractFontSize * 1.38;
   ctx.font = canvasFont(abstractFontSize, 400);
   const abstractLines = splitLines(data.abstract || "—", 1465);
-  const abstractH = Math.max(477, 142 + abstractLines.length * abstractLineHeight);
+  const abstractAsset = getAbstractAsset(data.abstract || "—", abstractFontSize, 1465, () => setTimeout(drawPoster, 0));
+  const abstractH = Math.max(477, 118 + abstractAsset.height);
   const extraHeight = abstractH - 477;
   const welcomeY = 1535 + extraHeight;
   const baseFooterY = 2275;
@@ -169,7 +217,8 @@ function drawPoster() {
   ctx.fillText("ABSTRACT", 94, abstractY + 56);
   ctx.fillStyle = "#183b35";
   ctx.font = canvasFont(abstractFontSize, 400);
-  abstractLines.forEach((line, i) => ctx.fillText(line, 94, abstractY + 110 + i * abstractLineHeight));
+  if (abstractAsset.image) ctx.drawImage(abstractAsset.image, 94, abstractY + 88, 1465, abstractAsset.height);
+  else abstractLines.forEach((line, i) => ctx.fillText(line, 94, abstractY + 110 + i * abstractLineHeight));
 
   const infoOffset = extraHeight;
   ctx.fillStyle = gold;
